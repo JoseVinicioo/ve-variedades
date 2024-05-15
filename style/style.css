@@ -1,0 +1,112 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root{
+    --primary: #F5989D;
+    --secundary: #5F9995;
+    --silver: #F5F7FA;
+    --white: #FFFFFF;
+    --grey: #717171;
+    --dark-grey: #4D4D4D;
+    --dark-color: #263238;
+}
+body{
+    margin: 0;
+    width: 100vw;
+}
+h1{
+    font: normal 3.5rem "Inter";
+    margin: 0;
+    color: var(--dark-grey);
+}
+p,a{
+    font: normal 0.85rem "Inter";
+    color: var(--grey);
+}
+b{
+    color: var(--primary);
+}
+header{
+    position: fixed;
+    z-index: 9999; 
+    top: 0;
+    width: 96vw;
+    display: flex;
+    justify-content: flex-start;
+    padding: 2%;
+    background-color: var(--white);
+    
+    box-shadow: 1px 2.78px 5.57px rgba(0, 0, 0, 0.137);
+}
+#area-logo{
+    display: flex;
+    align-items: center;
+}
+#area-logo > img{
+    width: 50px;
+    height: 50px;
+}
+#area-logo > p{
+    font-weight: 700;
+}
+#right-side{
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+#right-side > nav > ul{
+    display: flex;
+    gap: 2px;
+    list-style: none;
+    padding-right: 20px;
+}
+#right-side > nav > ul > li > a{
+    text-decoration: none;
+    padding: 8px 20px;
+    border-radius: 10px;
+    transition: all 0.4s ease;
+}
+a:hover{
+    background-color: var(--silver);
+    cursor: pointer;
+    font-weight: 600;
+}
+button{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: #30746F;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font: 500 0.85rem "Inter";
+    color: var(--white);
+    transition: all 0.5s ease;
+}
+button:hover{
+    opacity: 0.8;
+    cursor: pointer;
+    scale: 1.03;
+}
+
+#sec-Boas-Vindas{
+    height: 64vh;
+    background-color: var(--silver);
+    padding: 170px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15%;
+}
+#letf-side{
+    max-width: 400px;
+}
+#letf-side > button{
+    background-color: var(--primary);
+    margin-top: 25px;
+}
+
+#sec-Boas-Vindas > img{
+    max-width: 400px;
+}
