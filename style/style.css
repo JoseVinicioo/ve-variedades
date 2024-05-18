@@ -11,18 +11,31 @@
     --dark-grey: #4D4D4D;
     --dark-color: #263238;
 }
+html{
+    scroll-behavior: smooth;
+}
 body{
     margin: 0;
-    width: 100vw;
+    width: auto;
 }
 h1{
     font: normal 3.5rem "Inter";
     margin: 0;
     color: var(--dark-grey);
 }
+h2{
+    font: bold 1.8rem "Inter";
+    color: var(--dark-grey);
+}
+h3{
+    font: normal 1.2rem "Inter";
+    color: var(--dark-grey);
+    margin-top: 10px;
+}
 p,a{
     font: normal 0.85rem "Inter";
     color: var(--grey);
+    text-decoration: none;
 }
 b{
     color: var(--primary);
@@ -31,12 +44,11 @@ header{
     position: fixed;
     z-index: 9999; 
     top: 0;
-    width: 96vw;
+    width: 98vw;
     display: flex;
     justify-content: flex-start;
-    padding: 2%;
+    padding: 1%;
     background-color: var(--white);
-    
     box-shadow: 1px 2.78px 5.57px rgba(0, 0, 0, 0.137);
 }
 #area-logo{
@@ -75,6 +87,7 @@ a:hover{
 button{
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 5px;
     background-color: #30746F;
     border: none;
@@ -83,6 +96,9 @@ button{
     font: 500 0.85rem "Inter";
     color: var(--white);
     transition: all 0.5s ease;
+}
+button > img{
+    width: 20px;
 }
 button:hover{
     opacity: 0.8;
@@ -97,16 +113,83 @@ button:hover{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 15%;
 }
 #letf-side{
     max-width: 400px;
 }
-#letf-side > button{
+#letf-side > a > button {
     background-color: var(--primary);
     margin-top: 25px;
 }
 
 #sec-Boas-Vindas > img{
-    max-width: 400px;
+    width: 400px
+}
+
+#sec-produtos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+#produtos{
+    max-width: 900px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: space-between;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 1.5rem;
+    padding-left: 0;
+}
+.unic-produto{
+    max-width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.unic-produto > img{
+    border-radius: 15px;
+}
+.unic-produto > img:hover{
+    cursor: pointer;
+}
+
+#sec-sobre-mim{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: 82vh;
+}
+#sec-sobre-mim > img{
+    width: 200px;
+
+}
+#box-redes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding-left: 0;
+    list-style: none;
+}
+.box > a > button{
+    width: 450px;
+    height: 80px;
+    gap: 10px;
+    font-size: 1.4rem;
+}
+.box > a > button > img{
+    width: 30px;
+}
+.insta > a > button{
+    background: linear-gradient(to left, #FEDA75, #FA7E1E, #D62976, #962FBF, #4F5BD5);
+}
+.face > a > button{
+    background-color: #3B5998;
 }

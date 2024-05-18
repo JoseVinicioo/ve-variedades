@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="" type="image/x-icon">
+    <link rel="shortcut icon" href="src/logo-variantes/icon-claro (1).ico" type="image/x-icon">
     <title>Vê Variedades</title>
     <link rel="stylesheet" href="style/style.css">
 </head>
+
 <body>
     <header>
         <div id="area-logo">
@@ -17,8 +19,8 @@
             <nav>
                 <ul>
                     <li><a href="#sec-Boas-Vindas">Home</a></li>
-                    <li><a href="#">Sobre mim</a></li>
-                    <li><a href="">Produtos</a></li>
+                    <li><a href="#sec-sobre-mim">Sobre mim</a></li>
+                    <li><a href="#sec-produtos">Produtos</a></li>
                     <li><a href="">Como usar o site</a></li>
                 </ul>
             </nav>
@@ -34,12 +36,64 @@
         <div id="letf-side">
             <h1>Sejam <br> <b>Bem Vindos!!</b></h1>
             <p>Acesse o catálogo para ver as novidades.</p>
-            <button type="button">Acessar catálogo</button>
+            <a href="#sec-produtos"><button type="button">Acessar catálogo</button></a>
         </div>
         <img src="src/imgs-geral/Hello-cuate.png" alt="girl-hello">
     </section>
-    <section></section>
-    <section></section>
+    <section id="sec-produtos">
+        <h2>Catálogo</h2>
+        <div>
+            <ul id="produtos">
+                <li class="unic-produto">
+                    <img src="src/websiteplanet-dummy-250X250.png" alt="">
+                    <h3>Produto</h3>
+                </li>
+                <li class="unic-produto">
+                    <img src="src/websiteplanet-dummy-250X250.png" alt="">
+                    <h3>Produto</h3>
+                </li>
+                <li class="unic-produto">
+                    <img src="src/websiteplanet-dummy-250X250.png" alt="">
+                    <h3>Produto</h3>
+                </li>
+                <li class="unic-produto">
+                    <img src="src/websiteplanet-dummy-250X250.png" alt="">
+                    <h3>Produto</h3>
+                </li>
+                <li class="unic-produto">
+                    <img src="src/websiteplanet-dummy-250X250.png" alt="">
+                    <h3>Produto</h3>
+                </li>
+                <li class="unic-produto">
+                    <img src="src/websiteplanet-dummy-250X250.png" alt="">
+                    <h3>Produto</h3>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section id="sec-sobre-mim">
+        <h2>Sobre Mim</h2>
+        <p>Me chamo Verônica e sou uma vendedora autonoma, <br> com a missão de lhe fornecer os melhores itens para você <br> ou para presentear quem você ama!</p>
+        <img id="fotoPerfil" src="src/avatar.png" alt="">
+        <ul id="box-redes">
+            <li class="box whats">
+                <a href=""><button type="button">Contato direto
+                        <img src="src/icons-redes/whatsIcon.png" alt="">
+                    </button></a>
+            </li>
+            <li class="box insta">
+                <a href=""><button type="button">Siga-me no Insta
+                        <img src="src/icons-redes/instaIcon.png" alt="">
+                    </button></a>
+            </li>
+            <li class="box face">
+                <a href=""><button type="button">Acesse meu Face
+                        <img src="src/icons-redes/faceIcon.png" alt="">
+                    </button></a>
+            </li>
+        </ul>
+    </section>
     <footer></footer>
 </body>
+
 </html>
