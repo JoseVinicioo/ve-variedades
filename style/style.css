@@ -360,7 +360,7 @@ footer {
     .nav {
         position: fixed;
         justify-content: center;
-        top: 65px;
+        top: 60px;
         right: 0;
         left: 0;
         background-color: rgba(0, 0, 0, 0.438);
