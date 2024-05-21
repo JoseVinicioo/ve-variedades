@@ -33,7 +33,7 @@ h2 {
 }
 
 h3 {
-    font: normal 1.2rem "Inter";
+    font: 600 1.2rem "Inter";
     color: var(--dark-grey);
     margin-top: 10px;
 }
@@ -223,7 +223,7 @@ button:hover {
     margin-top: 200px;
 }
 
-#produtos {
+.produtos {
     max-width: 900px;
     display: flex;
     align-items: center;
@@ -240,6 +240,12 @@ button:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
+    transition: all 0.5s ease;
+}
+
+.produto:hover{
+    cursor: pointer;
+    scale: 1.05;
 }
 
 .img{
@@ -248,19 +254,16 @@ button:hover {
     height: 250px;
 }
 .roupas{
-    background: url(../src/foto-produtos/roupas/Como-montar-uma-loja-de-roupas.jpg) no-repeat center top/ cover;
+    background: url(../src/foto-produtos/roupas/foto-capa.jpg) no-repeat center / cover;
 }
 .cama{
-
+    background: url(../src/foto-produtos/cama-mesa-banho/foto-capa.jpg) no-repeat center/cover;
 }
 .bijuteria{
-
-}
-.img:hover{
-    cursor: pointer;
+    background: url(../src/foto-produtos/bijuterias/foto-capa.jpg) no-repeat center/cover;
 }
 .focus{
-    
+    filter: blur(1.3px);
 }
 
 /* sobre - mim */

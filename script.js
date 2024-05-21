@@ -21,3 +21,31 @@ function ocultarMenu() {
     }
 }
 ocultarMenu();
+
+
+let tdsProdutos = document.querySelectorAll('.produto')
+
+
+function focusTodosMenos(semFoco) {
+    semFoco.onmouseover  = function () {
+        tdsProdutos.forEach(produto => {
+            if (produto !== semFoco) {
+                produto.classList.toggle('focus')
+            }
+        })
+    }
+    semFoco.onmouseout = function () {
+        tdsProdutos.forEach(produto => {
+            produto.classList.remove('focus')
+        })
+    }
+}
+
+let roupas = document.querySelector('.primeiro')
+focusTodosMenos(roupas)
+
+let camaMesaBanho = document.querySelector('.segundo')
+focusTodosMenos(camaMesaBanho)
+
+let bijuteria = document.querySelector('.terceiro')
+focusTodosMenos(bijuteria)
