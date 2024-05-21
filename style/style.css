@@ -235,19 +235,32 @@ button:hover {
     padding-left: 0;
 }
 
-.unic-produto {
+.produto {
     max-width: 250px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.unic-produto>img {
+.img{
     border-radius: 15px;
+    width: 250px;
+    height: 250px;
 }
+.roupas{
+    background: url(../src/foto-produtos/roupas/Como-montar-uma-loja-de-roupas.jpg) no-repeat center top/ cover;
+}
+.cama{
 
-.unic-produto>img:hover {
+}
+.bijuteria{
+
+}
+.img:hover{
     cursor: pointer;
+}
+.focus{
+    
 }
 
 /* sobre - mim */
@@ -443,7 +456,7 @@ footer {
         padding: 100px 0px;
     }
     #sec-Boas-Vindas>img{
-        width: 370px;
+        width: 85vw;
     }
     .box>a>button>img{
         width: 20px;
