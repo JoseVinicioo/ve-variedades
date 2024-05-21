@@ -16,17 +16,37 @@
             <p>Vê Variedades</p>
         </div>
         <div id="right-side">
-            <nav>
+            <nav class="nav">
                 <ul>
                     <li><a href="#sec-Boas-Vindas">Home</a></li>
-                    <li><a href="#sec-sobre-mim">Sobre mim</a></li>
                     <li><a href="#sec-produtos">Produtos</a></li>
-                    <li><a href="">Como usar o site</a></li>
+                    <li><a href="#sec-sobre-mim">Sobre mim</a></li>
+                    <li><a onclick="openPopup()">Como usar o site</a></li>
+                    <div class="overlay" id="popupOverlay" onclick="closePopup()">
+                        <div class="popup">
+                            <h2>Com ultilizar o site:)</h2>
+                            <p>O site foi pensado e desenvolvido para ser usado da maneira mais simples e intuitiva.
+                            </p>
+                            <h3>Navegar entre os conteúdos da página</h3>
+
+                            <p>
+                                Você pode navegar pelos conteúdos da página usando o menu interativo encontrado na parte superior da sua tela.
+                            </p>
+                            <h3>Navegar pelos produtos do catálogo</h3>
+                            <p>
+                                Basta ir clicando e escolhendo qual produto lhe interessa, ao chegar nele, você tera acesso as fotos e videos desse produto junto com um botão que direciona você para o Whatsap, ja inidicando qual pedido você quer.
+                            </p>
+                    
+                            <button onclick="closePopup()">Entendido</button>
+                        </div>
                 </ul>
             </nav>
+            <div id="menu" onclick="mostrarMenu()">
+                <img src="src/imgs-geral/menu.svg" alt="">
+            </div>
             <a href="https://wa.me/558894859101" target="_blank">
                 <button type="button">
-                    Contato direto
+                    <p>Contato direto</p>
                     <img src="src/icons-redes/whatsIcon.png" alt="icons-whats">
                 </button>
             </a>
@@ -36,7 +56,7 @@
         <div id="letf-side">
             <h1>Sejam <br> <b>Bem Vindos!!</b></h1>
             <p>Acesse o catálogo para ver as novidades.</p>
-            <a href="#sec-produtos"><button type="button">Acessar catálogo</button></a>
+            <a href="#sec-produtos"><button type="button"><p>Acessar catálogo</p></button></a>
         </div>
         <img src="src/imgs-geral/Hello-cuate.png" alt="girl-hello">
     </section>
@@ -73,27 +93,47 @@
     </section>
     <section id="sec-sobre-mim">
         <h2>Sobre Mim</h2>
-        <p>Me chamo Verônica e sou uma vendedora autonoma, <br> com a missão de lhe fornecer os melhores itens para você <br> ou para presentear quem você ama!</p>
+        <p>Me chamo Verônica e sou uma vendedora autonoma, <br> com a missão de lhe fornecer os melhores itens para você
+            <br> ou para presentear quem você ama!
+        </p>
         <img id="fotoPerfil" src="src/avatar.png" alt="">
         <ul id="box-redes">
             <li class="box whats">
-                <a href=""><button type="button">Contato direto
-                        <img src="src/icons-redes/whatsIcon.png" alt="">
-                    </button></a>
+                <a href="https://wa.me/558894859101" target="_blank"><button type="button"><p>Contato direto</p>
+                <img src="src/icons-redes/whatsIcon.png" alt="">
+                </button></a>
             </li>
             <li class="box insta">
-                <a href=""><button type="button">Siga-me no Insta
+                <a href="https://www.instagram.com/ve_olivindo?igsh=NHdiYTZwYnFva3Js" target="_blank"><button type="button"><p>Siga-me no Insta</p>
                         <img src="src/icons-redes/instaIcon.png" alt="">
                     </button></a>
             </li>
             <li class="box face">
-                <a href=""><button type="button">Acesse meu Face
+                <a href="" target="_blank"><button type="button"><p>Acesse meu Face</p>
                         <img src="src/icons-redes/faceIcon.png" alt="">
                     </button></a>
             </li>
         </ul>
     </section>
-    <footer></footer>
+    <footer>
+        <div id="agradecimento">
+            <h1>
+                <b>Obrigada</b> por <br>
+                visitar o site!!
+            </h1>
+        </div>
+        <div id="atribuicao">
+            <p>Site criado e desenvolvido por <br>
+                <b>José Vinício</b>
+            </p>
+            <div id="icons">
+                <a href="https://www.instagram.com/vinnykkkkj?igsh=aHZhbXpyeWl2dWVo" target="_blank"><img src="src/icons-redes/instaIcon.png" alt=""></a>
+                <a href="https://www.linkedin.com/in/josé-vinicio-olivindo-dias-7b81b320b/" target="_blank"><img src="src/icons-redes/linkedInIcon.png" alt=""></a>
+                <a href="https://github.com/JoseVinicioo" target="_blank"><img src="src/icons-redes/githubIcon.png" alt=""></a>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
 </body>
 
 </html>
