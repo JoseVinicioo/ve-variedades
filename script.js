@@ -41,11 +41,33 @@ function focusTodosMenos(semFoco) {
     }
 }
 
+let todas = document.querySelectorAll('.as')
+function todasMenos(excesao){
+    excesao.classList.toggle('oculta')
+    todas.forEach(item =>{
+        if (item !== excesao){
+            item.classList.add('oculta')
+        }
+    })
+}
+
 let roupas = document.querySelector('.primeiro')
 focusTodosMenos(roupas)
+let itensRoupa = document.querySelector('.Roupa')
+function cliqueRoupa(){
+    todasMenos(itensRoupa)
+}
 
 let camaMesaBanho = document.querySelector('.segundo')
 focusTodosMenos(camaMesaBanho)
+let itensCama = document.querySelector('.Cama')
+function cliqueCama(){
+    todasMenos(itensCama)
+}
 
 let bijuteria = document.querySelector('.terceiro')
 focusTodosMenos(bijuteria)
+let itensBiju = document.querySelector('.Biju')
+function cliqueBiju(){
+    todasMenos(itensBiju)
+}

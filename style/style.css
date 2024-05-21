@@ -216,11 +216,12 @@ button:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 85vh;
+    height: 70vh;
 }
 
 #sec-produtos>h2 {
-    margin-top: 200px;
+    margin-top: 70px;
+    margin-bottom: 70px;
 }
 
 .produtos {
@@ -256,6 +257,21 @@ button:hover {
 .roupas{
     background: url(../src/foto-produtos/roupas/foto-capa.jpg) no-repeat center / cover;
 }
+
+.as{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    list-style: none;
+    padding-left: 0;
+}
+
+.oculta{
+    opacity: 0;
+    position: absolute;
+}
+
 .cama{
     background: url(../src/foto-produtos/cama-mesa-banho/foto-capa.jpg) no-repeat center/cover;
 }
@@ -300,7 +316,8 @@ button:hover {
 }
 
 .box>a>button>img {
-    width: 30px;
+    width: 25px;
+    margin-left: 5px;
 }
 
 .insta>a>button {
