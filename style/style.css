@@ -172,11 +172,13 @@ button {
     padding: 10px 25px;
     transition: all 0.5s ease;
 }
-button p{
+
+button p {
     font: 500 0.85rem "Inter";
     color: var(--white);
     margin: 0;
 }
+
 button>img {
     width: 20px;
 }
@@ -216,7 +218,7 @@ button:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 70vh;
+    height: 80vh;
 }
 
 #sec-produtos>h2 {
@@ -232,7 +234,7 @@ button:hover {
     align-content: space-between;
     flex-wrap: wrap;
     list-style: none;
-    gap: 1.5rem;
+    gap: 2.5rem;
     padding-left: 0;
 }
 
@@ -244,42 +246,108 @@ button:hover {
     transition: all 0.5s ease;
 }
 
-.produto:hover{
+.produto:hover {
     cursor: pointer;
-    scale: 1.05;
+    scale: 1.025;
 }
 
-.img{
+.img {
     border-radius: 15px;
     width: 250px;
     height: 250px;
+    transition: all 0.6s ease;
 }
-.roupas{
+.img::before{
+    display: block;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: url(../src/imgs-geral/setaBaixo.svg) no-repeat right bottom ;
+}
+.roupas {
     background: url(../src/foto-produtos/roupas/foto-capa.jpg) no-repeat center / cover;
 }
 
-.as{
+.rp {
+    width: 117px;
+    height: 110px;
+    background-color: #263238;
+    border-radius: 7px;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.rp p {
+    font: 400 0.9rem "Inter";
+    color: var(--silver);
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    padding: 4px;
+    backdrop-filter: blur(1.5px);
+}
+
+.rp:hover {
+    scale: 1.1;
+    box-shadow: 1px 1px 7px 0px rgba(0, 0, 0, 0.1);
+}
+
+.pijama {
+    background: url(../src/foto-produtos/roupas/pijama/image.png) no-repeat center/cover;
+}
+
+.pecasInt {
+    background: url(../src/foto-produtos/roupas/peças-intimas/image.png) no-repeat center/cover;
+}
+
+.moleton {}
+
+.blusas {}
+
+.shorts {}
+
+.conjunto {}
+
+.as {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 15px;
     justify-content: center;
     list-style: none;
     padding-left: 0;
 }
 
-.oculta{
+.oculta {
     opacity: 0;
     position: absolute;
 }
 
-.cama{
+.imgEscondida {
+    height: 70px;
+    opacity: 0.8;
+}
+
+.imgEscondida::before {
+    display: block;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: url(../src/imgs-geral/setaCima.svg) no-repeat right bottom ;
+    backdrop-filter: blur(1.05px);
+}
+
+.cama {
     background: url(../src/foto-produtos/cama-mesa-banho/foto-capa.jpg) no-repeat center/cover;
 }
-.bijuteria{
+
+.bijuteria {
     background: url(../src/foto-produtos/bijuterias/foto-capa.jpg) no-repeat center/cover;
 }
-.focus{
-    filter: blur(1.3px);
+
+.focus {
+    filter: blur(0.9px);
 }
 
 /* sobre - mim */
@@ -306,9 +374,11 @@ button:hover {
     padding-left: 0;
     list-style: none;
 }
-.box button{
+
+.box button {
     width: 500px;
 }
+
 .box a {
     height: 70px;
     gap: 10px;
@@ -390,6 +460,7 @@ footer {
     #sec-produtos {
         height: auto;
     }
+
     .nav {
         position: fixed;
         justify-content: center;
@@ -400,21 +471,25 @@ footer {
         opacity: 0;
         transition: opacity 0.3s ease-in-out;
     }
-    .nav ul{
+
+    .nav ul {
         margin: 0px;
         padding: 0;
         justify-content: center;
     }
-    .nav a{
+
+    .nav a {
         font-weight: 500;
         display: flex;
         text-decoration: underline;
         font-size: 1rem;
         color: var(--silver);
     }
-    .nav a:hover{
+
+    .nav a:hover {
         color: var(--dark-color);
     }
+
     .mostrar {
         opacity: 1;
     }
@@ -435,54 +510,73 @@ footer {
         align-items: center;
         text-align: center;
     }
+
     #sec-produtos>h2 {
         margin-top: 120px;
     }
-    #right-side a button{
+
+    #right-side a button {
         padding: 10px;
         border-radius: 50%;
     }
-    #right-side button img{
+
+    #right-side button img {
         width: 25px;
     }
-    #right-side button p{
+
+    #right-side button p {
         display: none;
     }
-    .box button{
+
+    .box button {
         width: 80vw;
     }
 }
+
 @media (max-width: 540px) {
-    #right-side>nav>ul>li>a{
+    #right-side>nav>ul>li>a {
         padding: 10px;
     }
-    .nav a:hover{
+
+    .nav a:hover {
         background-color: rgba(0, 0, 0, 0);
         color: var(--silver);
     }
-    h1{
+
+    h1 {
         font-size: 2.7rem;
     }
-    h2{
+
+    h2 {
         font-size: 1.5rem;
     }
-    p{
+
+    p {
         font-size: 0.76rem;
     }
-    footer h1{
+
+    footer h1 {
         font-size: 2.2rem;
     }
-    #sec-Boas-Vindas{
+
+    #sec-Boas-Vindas {
         padding: 100px 0px;
     }
-    #sec-Boas-Vindas>img{
+
+    #sec-Boas-Vindas>img {
         width: 85vw;
     }
-    .box>a>button>img{
+
+    .box>a>button>img {
         width: 20px;
     }
+
     #icons>a>img {
         width: 15px;
         height: 15px;
+    }
+
+    .focus {
+        filter: none;
     }
 }

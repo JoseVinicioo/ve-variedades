@@ -42,32 +42,44 @@ function focusTodosMenos(semFoco) {
 }
 
 let todas = document.querySelectorAll('.as')
-function todasMenos(excesao){
+let img = document.querySelectorAll('.img')
+function todasMenos(excesao, imageSelec){
     excesao.classList.toggle('oculta')
     todas.forEach(item =>{
         if (item !== excesao){
-            item.classList.add('oculta')
+            item.classList.add('oculta')  
+        }
+    })
+    img.forEach(imagem =>{
+        if(imagem !== imageSelec){
+            imagem.classList.remove('imgEscondida')
+        }
+        else{
+            imageSelec.classList.toggle('imgEscondida')
         }
     })
 }
 
 let roupas = document.querySelector('.primeiro')
+let imgRoupas = document.querySelector('.roupas')
 focusTodosMenos(roupas)
 let itensRoupa = document.querySelector('.Roupa')
 function cliqueRoupa(){
-    todasMenos(itensRoupa)
+    todasMenos(itensRoupa, imgRoupas)
 }
 
 let camaMesaBanho = document.querySelector('.segundo')
+let imgMesaBanho = document.querySelector('.cama')
 focusTodosMenos(camaMesaBanho)
 let itensCama = document.querySelector('.Cama')
 function cliqueCama(){
-    todasMenos(itensCama)
+    todasMenos(itensCama, imgMesaBanho)
 }
 
 let bijuteria = document.querySelector('.terceiro')
+let imgBijuteria = document.querySelector('.bijuteria')
 focusTodosMenos(bijuteria)
 let itensBiju = document.querySelector('.Biju')
 function cliqueBiju(){
-    todasMenos(itensBiju)
+    todasMenos(itensBiju, imgBijuteria)
 }
