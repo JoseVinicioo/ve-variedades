@@ -234,7 +234,7 @@ button:hover {
     align-content: space-between;
     flex-wrap: wrap;
     list-style: none;
-    gap: 2.5rem;
+    gap: 4.5rem;
     padding-left: 0;
 }
 
@@ -246,7 +246,7 @@ button:hover {
     transition: all 0.5s ease;
 }
 
-.produto:hover {
+.img:hover {
     cursor: pointer;
     scale: 1.025;
 }
@@ -260,9 +260,9 @@ button:hover {
 .img::before{
     display: block;
     content: '';
-    width: 100%;
-    height: 100%;
-    background: url(../src/imgs-geral/setaBaixo.svg) no-repeat right bottom ;
+    width: 95%;
+    height: 95%;
+    background: url(../src/imgs-geral/dedoPraCima.svg) no-repeat right bottom ;
 }
 .roupas {
     background: url(../src/foto-produtos/roupas/foto-capa.jpg) no-repeat center / cover;
@@ -280,7 +280,9 @@ button:hover {
 }
 
 .rp p {
-    font: 400 0.9rem "Inter";
+    letter-spacing: 1.05px;
+    text-shadow: 1px 1px 15px #000000b4;
+    font: 500 0.9rem "Inter";
     color: var(--silver);
     width: 100%;
     text-align: center;
@@ -288,17 +290,36 @@ button:hover {
     padding: 4px;
     backdrop-filter: blur(1.5px);
 }
+.selecao{
+    padding: 7px;
+    background-color: var(--white);
+    border: 1px solid var(--dark-color);
+    border-radius: 5px;
+    width: 90%;
+    text-align: center;
+    font: 500 0.85rem "Inter";
+    color: var(--dark-grey);
+}
+.fem{
+    background-color: #f5989d86;
+}
+.masc{
 
+}
+.selecao:hover{
+    cursor: pointer;
+}
 .rp:hover {
     scale: 1.1;
     box-shadow: 1px 1px 7px 0px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
 }
 
-.pijama {
+.Imgpijama {
     background: url(../src/foto-produtos/roupas/pijama/image.png) no-repeat center/cover;
 }
 
-.pecasInt {
+.ImgpecasInt {
     background: url(../src/foto-produtos/roupas/peças-intimas/image.png) no-repeat center/cover;
 }
 
@@ -322,6 +343,7 @@ button:hover {
 .oculta {
     opacity: 0;
     position: absolute;
+    margin-top: 250px;
 }
 
 .imgEscondida {
@@ -333,8 +355,8 @@ button:hover {
     display: block;
     content: '';
     width: 100%;
-    height: 100%;
-    background: url(../src/imgs-geral/setaCima.svg) no-repeat right bottom ;
+    height: 85%;
+    background: url(../src/imgs-geral/dedoPraBaixo.svg) no-repeat right bottom ;
     backdrop-filter: blur(1.05px);
 }
 
@@ -561,6 +583,7 @@ footer {
 
     #sec-Boas-Vindas {
         padding: 100px 0px;
+        height: 70vh;
     }
 
     #sec-Boas-Vindas>img {

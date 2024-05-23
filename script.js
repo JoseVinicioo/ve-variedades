@@ -28,14 +28,14 @@ let tdsProdutos = document.querySelectorAll('.produto')
 
 function focusTodosMenos(semFoco) {
     semFoco.onmouseover  = function () {
-        tdsProdutos.forEach(produto => {
+        img.forEach(produto => {
             if (produto !== semFoco) {
                 produto.classList.toggle('focus')
             }
         })
     }
     semFoco.onmouseout = function () {
-        tdsProdutos.forEach(produto => {
+        img.forEach(produto => {
             produto.classList.remove('focus')
         })
     }
@@ -60,25 +60,47 @@ function todasMenos(excesao, imageSelec){
     })
 }
 
-let roupas = document.querySelector('.primeiro')
 let imgRoupas = document.querySelector('.roupas')
-focusTodosMenos(roupas)
+focusTodosMenos(imgRoupas)
 let itensRoupa = document.querySelector('.Roupa')
 function cliqueRoupa(){
     todasMenos(itensRoupa, imgRoupas)
+    console.log('ta')
 }
 
-let camaMesaBanho = document.querySelector('.segundo')
+function cliquePijama(){
+    let boxPijama = document.querySelector('.pijama')
+    let boxSelecao = document.createElement('div')
+    boxSelecao.classList.add('selecao')
+    boxSelecao.innerHTML = 'Aulto/Feminino'
+    boxSelecao.classList.add('fem')
+    boxPijama.appendChild(boxSelecao)
+    boxPijama.onclick = function(){
+        boxSelecao.classList.toggle('oculta')
+    }
+}
+function cliquePecasInt(){
+    let boxPecasInt = document.querySelector('.pecasInt')
+    let boxSelecao = document.createElement('div')
+    boxSelecao.classList.add('selecao')
+    boxSelecao.innerHTML = 'Aulto/Feminino'
+    boxPecasInt.appendChild(boxSelecao)
+    boxPecasInt.onclick = function(){
+        boxSelecao.classList.toggle('oculta')
+    }
+}
+
+
+
 let imgMesaBanho = document.querySelector('.cama')
-focusTodosMenos(camaMesaBanho)
+focusTodosMenos(imgMesaBanho)
 let itensCama = document.querySelector('.Cama')
 function cliqueCama(){
     todasMenos(itensCama, imgMesaBanho)
 }
 
-let bijuteria = document.querySelector('.terceiro')
 let imgBijuteria = document.querySelector('.bijuteria')
-focusTodosMenos(bijuteria)
+focusTodosMenos(imgBijuteria)
 let itensBiju = document.querySelector('.Biju')
 function cliqueBiju(){
     todasMenos(itensBiju, imgBijuteria)
