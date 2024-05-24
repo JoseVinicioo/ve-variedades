@@ -325,7 +325,7 @@ button:hover {
 }
 
 .moleton {}
-    
+
 .blusas {}
 
 .shorts {}
@@ -342,6 +342,7 @@ button:hover {
 }
 
 .oculta {
+    display: none;
     opacity: 0;
     position: absolute;
     margin-top: 250px;
