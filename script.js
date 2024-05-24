@@ -69,13 +69,13 @@ function cliqueRoupa() {
 
 let boxPijama = document.querySelector('.pijama')
 boxPijama.onclick = function () {
+    tirarTodasMenosComClass('pjama')
     let boxSelecao = document.createElement('div')
     boxSelecao.classList.add('selecao')
     boxSelecao.classList.add('pjama')
     boxSelecao.innerHTML = 'Adulto/Feminino'
     boxSelecao.classList.add('fem')
     boxPijama.appendChild(boxSelecao)
-    tirarTodasMenosComClass('pjama')
     boxPijama.onclick = function(){
         tirarTodasMenosComClass('pjama')
     }

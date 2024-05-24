@@ -253,7 +253,7 @@ button:hover {
 
 .img {
     border-radius: 15px;
-    width: 250px;
+    width: 260px;
     height: 250px;
     transition: all 0.6s ease;
 }
@@ -279,23 +279,16 @@ button:hover {
     transition: all 0.3s ease;
 }
 
-.rp p {
-    letter-spacing: 1.05px;
-    text-shadow: 1px 1px 15px #000000b4;
-    font: 500 0.9rem "Inter";
-    color: var(--silver);
-    width: 100%;
-    text-align: center;
-    margin: 0;
-    padding: 4px;
-    backdrop-filter: blur(1.5px);
-}
 .selecao{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 5px;
     background-color: var(--white);
     border: 1px solid var(--dark-color);
     border-radius: 5px;
     width: 90%;
+    height: 30px;
     text-align: center;
     font: 600 0.8rem "Inter";
     color: var(--dark-grey);
@@ -311,8 +304,8 @@ button:hover {
     cursor: pointer;
 }
 .rp:hover {
-    scale: 1.1;
-    box-shadow: 1px 1px 7px 0px rgba(0, 0, 0, 0.1);
+    scale: 1.05;
+    box-shadow: 1px 1px 7px 0px rgba(0, 0, 0, 0.2);
     cursor: pointer;
 }
 
@@ -324,11 +317,17 @@ button:hover {
     background: url(../src/foto-produtos/roupas/peças-intimas/image.png) no-repeat center/cover;
 }
 
-.moleton {}
+.Imgmoleton {
+    background: url(../src/foto-produtos/roupas/Moleton/moleton-image.jpg) no-repeat center/cover;
+}
 
-.blusas {}
+.Imgblusas {
+    background: url(../src/foto-produtos/roupas/Blusas/image.png) no-repeat center/cover;
+}
 
-.shorts {}
+.Imgshorts {
+    background: url(../src/foto-produtos/roupas/Shorts/image.png) no-repeat top/cover;
+}
 
 .conjunto {}
 
@@ -382,7 +381,7 @@ button:hover {
     align-items: center;
     text-align: center;
     justify-content: center;
-    height: 85vh;
+    height: 75vh;
     padding-top: 55px;
 }
 
