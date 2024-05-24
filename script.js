@@ -27,7 +27,7 @@ let tdsProdutos = document.querySelectorAll('.produto')
 
 
 function focusTodosMenos(semFoco) {
-    semFoco.onmouseover  = function () {
+    semFoco.onmouseover = function () {
         img.forEach(produto => {
             if (produto !== semFoco) {
                 produto.classList.toggle('focus')
@@ -43,18 +43,18 @@ function focusTodosMenos(semFoco) {
 
 let todas = document.querySelectorAll('.as')
 let img = document.querySelectorAll('.img')
-function todasMenos(excesao, imageSelec){
+function todasMenos(excesao, imageSelec) {
     excesao.classList.toggle('oculta')
-    todas.forEach(item =>{
-        if (item !== excesao){
-            item.classList.add('oculta')  
+    todas.forEach(item => {
+        if (item !== excesao) {
+            item.classList.add('oculta')
         }
     })
-    img.forEach(imagem =>{
-        if(imagem !== imageSelec){
+    img.forEach(imagem => {
+        if (imagem !== imageSelec) {
             imagem.classList.remove('imgEscondida')
         }
-        else{
+        else {
             imageSelec.classList.toggle('imgEscondida')
         }
     })
@@ -63,30 +63,60 @@ function todasMenos(excesao, imageSelec){
 let imgRoupas = document.querySelector('.roupas')
 focusTodosMenos(imgRoupas)
 let itensRoupa = document.querySelector('.Roupa')
-function cliqueRoupa(){
+function cliqueRoupa() {
     todasMenos(itensRoupa, imgRoupas)
-    console.log('ta')
 }
 
-function cliquePijama(){
-    let boxPijama = document.querySelector('.pijama')
+let boxPijama = document.querySelector('.pijama')
+boxPijama.onclick = function () {
     let boxSelecao = document.createElement('div')
     boxSelecao.classList.add('selecao')
-    boxSelecao.innerHTML = 'Aulto/Feminino'
+    boxSelecao.classList.add('pjama')
+    boxSelecao.innerHTML = 'Adulto/Feminino'
     boxSelecao.classList.add('fem')
     boxPijama.appendChild(boxSelecao)
+    tirarTodasMenosComClass('pjama')
     boxPijama.onclick = function(){
-        boxSelecao.classList.toggle('oculta')
+        tirarTodasMenosComClass('pjama')
     }
+
 }
-function cliquePecasInt(){
-    let boxPecasInt = document.querySelector('.pecasInt')
-    let boxSelecao = document.createElement('div')
-    boxSelecao.classList.add('selecao')
-    boxSelecao.innerHTML = 'Aulto/Feminino'
-    boxPecasInt.appendChild(boxSelecao)
-    boxPecasInt.onclick = function(){
-        boxSelecao.classList.toggle('oculta')
+function CriarMascul(nameBox, identf) {
+    let boxMasc = document.createElement('div')
+    boxMasc.classList.add('selecao')
+    boxMasc.classList.add(`${identf}`)
+    boxMasc.classList.add('masc')
+    boxMasc.innerHTML = 'Masculino'
+    nameBox.appendChild(boxMasc)
+}
+function CriarFem(nameBox, identf) {
+    let boxFem = document.createElement('div')
+    boxFem.classList.add('selecao')
+    boxFem.classList.add(`${identf}`)
+    boxFem.classList.add('fem')
+    boxFem.innerHTML = 'Feminino'
+    nameBox.appendChild(boxFem)
+}
+function tirarTodasMenosComClass(excesao) {
+        let boxes = document.querySelectorAll('.selecao')
+        boxes.forEach(function (box) {
+            if (box.classList.contains(excesao)) {
+                box.classList.toggle('oculta')
+            }
+            else {
+                box.classList.add('oculta')
+            }
+        })
+}
+
+
+let pecasIntBox = document.querySelector('.pecasInt')
+pecasIntBox.onclick = function () {
+    tirarTodasMenosComClass('intm')
+    CriarMascul(pecasIntBox, 'intm')
+    CriarFem(pecasIntBox, 'intm')
+    pecasIntBox.onclick = function(){
+        tirarTodasMenosComClass('intm')
     }
 }
 
@@ -95,13 +125,13 @@ function cliquePecasInt(){
 let imgMesaBanho = document.querySelector('.cama')
 focusTodosMenos(imgMesaBanho)
 let itensCama = document.querySelector('.Cama')
-function cliqueCama(){
+function cliqueCama() {
     todasMenos(itensCama, imgMesaBanho)
 }
 
 let imgBijuteria = document.querySelector('.bijuteria')
 focusTodosMenos(imgBijuteria)
 let itensBiju = document.querySelector('.Biju')
-function cliqueBiju(){
+function cliqueBiju() {
     todasMenos(itensBiju, imgBijuteria)
 }

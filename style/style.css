@@ -291,20 +291,21 @@ button:hover {
     backdrop-filter: blur(1.5px);
 }
 .selecao{
-    padding: 7px;
+    padding: 5px;
     background-color: var(--white);
     border: 1px solid var(--dark-color);
     border-radius: 5px;
     width: 90%;
     text-align: center;
-    font: 500 0.85rem "Inter";
+    font: 600 0.8rem "Inter";
     color: var(--dark-grey);
 }
 .fem{
-    background-color: #f5989d86;
+    background-color: hsla(357, 82%, 78%, 0.525);
 }
 .masc{
-
+    background-color: hsl(176, 23%, 49%, 0.525);
+    margin: 10px 0px;
 }
 .selecao:hover{
     cursor: pointer;
@@ -324,7 +325,7 @@ button:hover {
 }
 
 .moleton {}
-
+    
 .blusas {}
 
 .shorts {}
