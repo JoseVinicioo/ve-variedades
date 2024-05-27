@@ -218,12 +218,12 @@ button:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 80vh;
+    height: auto;
 }
 
 #sec-produtos>h2 {
-    margin-top: 70px;
-    margin-bottom: 70px;
+    padding-top: 70px;
+    padding-bottom: 70px;
 }
 
 .produtos {
@@ -239,7 +239,7 @@ button:hover {
 }
 
 .produto {
-    max-width: 250px;
+    max-width: 300px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -253,8 +253,8 @@ button:hover {
 
 .img {
     border-radius: 15px;
-    width: 260px;
-    height: 250px;
+    width: 300px;
+    height: 270px;
     transition: all 0.6s ease;
 }
 .img::before{
@@ -269,8 +269,8 @@ button:hover {
 }
 
 .rp {
-    width: 117px;
-    height: 110px;
+    width: 130px;
+    height: 120px;
     background-color: #263238;
     border-radius: 7px;
     display: flex;
@@ -532,10 +532,6 @@ footer {
         justify-content: center;
         align-items: center;
         text-align: center;
-    }
-
-    #sec-produtos>h2 {
-        margin-top: 120px;
     }
 
     #right-side a button {

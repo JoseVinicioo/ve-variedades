@@ -81,20 +81,20 @@ boxPijama.onclick = function () {
     }
 
 }
-function CriarMascul(nameBox, identf) {
+function CriarMascul(nameBox, identf, opc = '') {
     let boxMasc = document.createElement('div')
     boxMasc.classList.add('selecao')
     boxMasc.classList.add(`${identf}`)
     boxMasc.classList.add('masc')
-    boxMasc.innerHTML = 'Masculino'
+    boxMasc.innerHTML = `${opc}Masculino`
     nameBox.appendChild(boxMasc)
 }
-function CriarFem(nameBox, identf) {
+function CriarFem(nameBox, identf, opc = '') {
     let boxFem = document.createElement('div')
     boxFem.classList.add('selecao')
     boxFem.classList.add(`${identf}`)
     boxFem.classList.add('fem')
-    boxFem.innerHTML = 'Feminino'
+    boxFem.innerHTML = `${opc}Feminino`
     nameBox.appendChild(boxFem)
 }
 function tirarTodasMenosComClass(excesao) {
@@ -120,7 +120,39 @@ pecasIntBox.onclick = function () {
     }
 }
 
+let moleton = document.querySelector('.moleton')
+moleton.onclick = function(){
+    tirarTodasMenosComClass('mlt')
+    CriarMascul(moleton, 'mlt', 'Infantil/')
+    CriarFem(moleton, 'mlt', 'Infantil/')
+    moleton.onclick = function(){
+        tirarTodasMenosComClass('mlt')
+    }
+}
 
+let blusas = document.querySelector('.blusas')
+blusas.onclick = function () {
+    tirarTodasMenosComClass('bls')
+    CriarMascul(blusas, 'bls', 'Adulto/')
+    CriarFem(blusas, 'bls', 'Adulto/')
+    blusas.onclick = function(){
+        tirarTodasMenosComClass('bls')
+    }
+}
+
+let shorts = document.querySelector('.shorts')
+shorts.onclick = function () {
+    tirarTodasMenosComClass('shrt')
+    let boxSelecao = document.createElement('div')
+    boxSelecao.classList.add('selecao')
+    boxSelecao.classList.add('shrt')
+    boxSelecao.innerHTML = 'Adulto/Masculino'
+    boxSelecao.classList.add('masc')
+    shorts.appendChild(boxSelecao)
+    shorts.onclick = function(){
+        tirarTodasMenosComClass('shrt')
+    }
+}
 
 let imgMesaBanho = document.querySelector('.cama')
 focusTodosMenos(imgMesaBanho)
