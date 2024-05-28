@@ -44,6 +44,7 @@ function focusTodosMenos(semFoco) {
 let todas = document.querySelectorAll('.as')
 let img = document.querySelectorAll('.img')
 function todasMenos(excesao, imageSelec) {
+
     excesao.classList.toggle('oculta')
     todas.forEach(item => {
         if (item !== excesao) {
@@ -76,7 +77,7 @@ boxPijama.onclick = function () {
     boxSelecao.innerHTML = 'Adulto/Feminino'
     boxSelecao.classList.add('fem')
     boxPijama.appendChild(boxSelecao)
-    boxPijama.onclick = function(){
+    boxPijama.onclick = function () {
         tirarTodasMenosComClass('pjama')
     }
 
@@ -98,34 +99,55 @@ function CriarFem(nameBox, identf, opc = '') {
     nameBox.appendChild(boxFem)
 }
 function tirarTodasMenosComClass(excesao) {
-        let boxes = document.querySelectorAll('.selecao')
-        boxes.forEach(function (box) {
-            if (box.classList.contains(excesao)) {
-                box.classList.toggle('oculta')
-            }
-            else {
-                box.classList.add('oculta')
-            }
-        })
+    let boxes = document.querySelectorAll('.selecao')
+    boxes.forEach(function (box) {
+        if (box.classList.contains(excesao)) {
+            box.classList.toggle('oculta')
+        }
+        else {
+            box.classList.add('oculta')
+        }
+    })
 }
+
+document.addEventListener('DOMContentLoaded', (event) => {
+    // Seleciona todas as divs com a classe 'rp'
+    const imageContainers = document.querySelectorAll('.rp');
+
+    // Adiciona um listener de clique a cada contêiner
+    imageContainers.forEach(container => {
+        container.addEventListener('click', function() {
+            // Remove a classe 'active' de todas as divs 'rp'
+            imageContainers.forEach(item => {
+                item.classList.remove('active');
+                item.classList.remove('redondo')
+            });
+
+            // Adiciona a classe 'active' apenas ao contêiner clicado
+            container.classList.toggle('active');
+            container.classList.toggle('redondo');
+        });
+    });
+});
 
 
 let pecasIntBox = document.querySelector('.pecasInt')
+let imgInt = document.querySelector('.ImgpecasInt')
 pecasIntBox.onclick = function () {
     tirarTodasMenosComClass('intm')
     CriarMascul(pecasIntBox, 'intm')
     CriarFem(pecasIntBox, 'intm')
-    pecasIntBox.onclick = function(){
+    pecasIntBox.onclick = function () {
         tirarTodasMenosComClass('intm')
     }
 }
 
 let moleton = document.querySelector('.moleton')
-moleton.onclick = function(){
+moleton.onclick = function () {
     tirarTodasMenosComClass('mlt')
     CriarMascul(moleton, 'mlt', 'Infantil/')
     CriarFem(moleton, 'mlt', 'Infantil/')
-    moleton.onclick = function(){
+    moleton.onclick = function () {
         tirarTodasMenosComClass('mlt')
     }
 }
@@ -135,7 +157,7 @@ blusas.onclick = function () {
     tirarTodasMenosComClass('bls')
     CriarMascul(blusas, 'bls', 'Adulto/')
     CriarFem(blusas, 'bls', 'Adulto/')
-    blusas.onclick = function(){
+    blusas.onclick = function () {
         tirarTodasMenosComClass('bls')
     }
 }
@@ -149,10 +171,22 @@ shorts.onclick = function () {
     boxSelecao.innerHTML = 'Adulto/Masculino'
     boxSelecao.classList.add('masc')
     shorts.appendChild(boxSelecao)
-    shorts.onclick = function(){
+    shorts.onclick = function () {
         tirarTodasMenosComClass('shrt')
     }
 }
+
+let conjunto = document.querySelector('.conjunto')
+conjunto.onclick = function () {
+    tirarTodasMenosComClass('cnjt')
+    CriarMascul(conjunto, 'cnjt', 'Infantil/')
+    CriarFem(conjunto, 'cnjt', 'Infantil/')
+    conjunto.onclick = function () {
+        tirarTodasMenosComClass('cnjt')
+    }
+}
+
+
 
 let imgMesaBanho = document.querySelector('.cama')
 focusTodosMenos(imgMesaBanho)
