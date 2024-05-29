@@ -396,8 +396,29 @@ button:hover {
     background: url(../src/foto-produtos/cama-mesa-banho/foto-capa.jpg) no-repeat center/cover;
 }
 
+.Imgtoalhas{
+    background: url(../src/foto-produtos/cama-mesa-banho/toalhas/image.png) no-repeat center/cover;
+}
+
+.Imglencois{
+    background: url(../src/foto-produtos/cama-mesa-banho/lençois/image.png) no-repeat center/cover;
+}
+
+.ImgCoxaDeCama{
+    background: url(../src/foto-produtos/cama-mesa-banho/coxa-de-cama/image.png) no-repeat center/cover;
+}
+
+.ImgPanoDePrato{
+    background: url(../src/foto-produtos/cama-mesa-banho/pano-de-prato/image.png) no-repeat center/cover;
+}
+
+
 .bijuteria {
     background: url(../src/foto-produtos/bijuterias/foto-capa.jpg) no-repeat center/cover;
+}
+
+.Imgacosefolheados{
+    background: url(../src/foto-produtos/bijuterias/acos-e-folheados/image.png) no-repeat center/cover;
 }
 
 .focus {
