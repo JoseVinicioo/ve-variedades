@@ -17,10 +17,15 @@ html {
 }
 
 body {
-    margin: 0;
-    width: auto;
+    margin: auto;
 }
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
+}
 h1 {
     font: normal 3.5rem "Inter";
     margin: 0;
@@ -172,7 +177,11 @@ button {
     padding: 10px 25px;
     transition: all 0.5s ease;
 }
-
+#bottonVoltar{
+    position: fixed;
+    left: 0;
+    margin-left: 10px;
+}
 button p {
     font: 500 0.85rem "Inter";
     color: var(--white);
@@ -267,7 +276,7 @@ button:hover {
 }
 
 .roupas {
-    background: url(../src/foto-produtos/roupas/foto-capa.jpg) no-repeat center / cover;
+    background: var(--primary) url(../src/arquivo-produtos/roupas/foto-capa.jpg) no-repeat center / cover;
 }
 
 .rp {
@@ -339,27 +348,27 @@ button:hover {
 }
 
 .Imgpijama {
-    background: url(../src/foto-produtos/roupas/pijama/image.png) no-repeat center/cover;
+    background: var(--primary) url(../src/arquivo-produtos/roupas/Pijamas/image.png) no-repeat center/cover;
 }
 
 .ImgpecasInt {
-    background: url(../src/foto-produtos/roupas/peças-intimas/image.png) no-repeat center/cover;
+    background: var(--primary) url(../src/arquivo-produtos/roupas/peças-intimas/image.png) no-repeat center/cover;
 }
 
 .Imgmoleton {
-    background: url(../src/foto-produtos/roupas/Moleton/moleton-image.jpg) no-repeat center/cover;
+    background: var(--primary) url(../src/arquivo-produtos/roupas/Moletom/moleton-image.jpg) no-repeat center/cover;
 }
 
 .Imgblusas {
-    background: url(../src/foto-produtos/roupas/Blusas/image.png) no-repeat center/cover;
+    background: var(--primary) url(../src/arquivo-produtos/roupas/Blusas/image.png) no-repeat center/cover;
 }
 
 .Imgshorts {
-    background: url(../src/foto-produtos/roupas/Shorts/image.png) no-repeat top/cover;
+    background: var(--primary) url(../src/arquivo-produtos/roupas/Shorts/image.png) no-repeat top/cover;
 }
 
 .Imgconjunto {
-    background: url(../src/foto-produtos/roupas/Conjunto/conjunto-image.png) no-repeat center/cover;
+    background: var(--primary) url(../src/arquivo-produtos/roupas/Conjunto/conjunto-image.png) no-repeat center/cover;
 }
 
 .as {
@@ -393,32 +402,32 @@ button:hover {
 }
 
 .cama {
-    background: url(../src/foto-produtos/cama-mesa-banho/foto-capa.jpg) no-repeat center/cover;
+    background: var(--primary) url(../src/arquivo-produtos/cama-mesa-banho/foto-capa.jpg) no-repeat center/cover;
 }
 
 .Imgtoalhas{
-    background: url(../src/foto-produtos/cama-mesa-banho/toalhas/image.png) no-repeat center/cover;
+    background: var(--primary) url(../src/arquivo-produtos/cama-mesa-banho/toalhas/image.png) no-repeat center/cover;
 }
 
 .Imglencois{
-    background: url(../src/foto-produtos/cama-mesa-banho/lençois/image.png) no-repeat center/cover;
+    background: var(--primary) url(../src/arquivo-produtos/cama-mesa-banho/lençois/image.png) no-repeat center/cover;
 }
 
 .ImgCoxaDeCama{
-    background: url(../src/foto-produtos/cama-mesa-banho/coxa-de-cama/image.png) no-repeat center/cover;
+    background: var(--primary) url(../src/arquivo-produtos/cama-mesa-banho/coxa-de-cama/image.png) no-repeat center/cover;
 }
 
 .ImgPanoDePrato{
-    background: url(../src/foto-produtos/cama-mesa-banho/pano-de-prato/image.png) no-repeat center/cover;
+    background: var(--primary) url(../src/arquivo-produtos/cama-mesa-banho/pano-de-prato/image.png) no-repeat center/cover;
 }
 
 
 .bijuteria {
-    background: url(../src/foto-produtos/bijuterias/foto-capa.jpg) no-repeat center/cover;
+    background: var(--primary) url(../src/arquivo-produtos/bijuterias/foto-capa.jpg) no-repeat center/cover;
 }
 
 .Imgacosefolheados{
-    background: url(../src/foto-produtos/bijuterias/acos-e-folheados/image.png) no-repeat center/cover;
+    background: var(--primary) url(../src/arquivo-produtos/bijuterias/acos-e-folheados/image.png) no-repeat center/cover;
 }
 
 .focus {

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Carregando...</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Obtém o título da URL
+            const params = new URLSearchParams(window.location.search);
+            const title = params.get('title');
+            console.log(title)
+
+            const pastaGeral = params.get('pasta');
+            console.log(pastaGeral)
+
+            const pastaProduto = params.get('pastaProduto')
+            console.log(pastaProduto)
+
+            const nameProd = params.get('arquivo')
+            console.log(nameProd)
+
+            // Define o título da página
+            if (title) {
+                document.title = decodeURIComponent(title);
+                document.getElementById('pageTitle').textContent = decodeURIComponent(title);
+            }
+
+            let Divprodutos = document.querySelector('#produtos')
+
+            fetch(`src/arquivo-produtos/${pastaGeral}/${pastaProduto}/json/${nameProd}.json`).then((Response) => {
+                Response.json().then((produtos) => {
+                    console.log(produtos)
+                })
+            })
+        });
+
+    </script>
+</head>
+
+<body>
+    <main id="produtos">
+        <a id="bottonVoltar" href="index.html#sec-produtos"><button type="button"><p>Voltar ao Catálogo</p></button></a>
+        <h2 id="pageTitle"></h2>
+
+    </main>
+</body>
+
+</html>

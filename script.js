@@ -68,20 +68,17 @@ function cliqueRoupa() {
     todasMenos(itensRoupa, imgRoupas)
 }
 
-let boxPijama = document.querySelector('.pijama')
-boxPijama.onclick = function () {
-    tirarTodasMenosComClass('pjama')
-    let boxSelecao = document.createElement('div')
-    boxSelecao.classList.add('selecao')
-    boxSelecao.classList.add('pjama')
-    boxSelecao.innerHTML = 'Adulto/Feminino'
-    boxSelecao.classList.add('fem')
-    boxPijama.appendChild(boxSelecao)
-    boxPijama.onclick = function () {
-        tirarTodasMenosComClass('pjama')
-    }
+function acessarProdutos(namePasta, namePastaProduto, nameArquiv, nameProduto) {
+    let dynamicTitle = `${nameProduto}`;
+    let PastaDinamica = `${namePasta}`;
+    let PastaProduto = `${namePastaProduto}`
+    let NameArquivo = `${nameArquiv}`;
 
+    window.location.href = `produto.html?title=${encodeURIComponent(dynamicTitle)}&pasta=${encodeURIComponent(PastaDinamica)}&arquivo=${encodeURIComponent(NameArquivo)}&pastaProduto=${encodeURIComponent(PastaProduto)}`;
+    
+    
 }
+
 function CriarMascul(nameBox, identf, opc = '') {
     let boxMasc = document.createElement('div')
     boxMasc.classList.add('selecao')
@@ -116,7 +113,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     // Adiciona um listener de clique a cada contêiner
     imageContainers.forEach(container => {
-        container.addEventListener('click', function() {
+        container.addEventListener('click', function () {
             // Remove a classe 'active' de todas as divs 'rp'
             imageContainers.forEach(item => {
                 item.classList.remove('active');
@@ -131,6 +128,24 @@ document.addEventListener('DOMContentLoaded', (event) => {
 });
 
 
+let boxPijama = document.querySelector('.pijama')
+boxPijama.onclick = function () {
+    tirarTodasMenosComClass('pjama')
+    let boxSelecao = document.createElement('div')
+    boxSelecao.classList.add('selecao')
+    boxSelecao.classList.add('pjama')
+    boxSelecao.innerHTML = 'Adulto/Feminino'
+    boxSelecao.classList.add('fem')
+    boxPijama.appendChild(boxSelecao)
+    boxPijama.onclick = function () {
+        tirarTodasMenosComClass('pjama')
+    }
+    boxSelecao.onclick = function () {
+        acessarProdutos('roupas', 'Pijamas', 'Pijamas', 'Pijamas')
+    }
+}
+
+
 let pecasIntBox = document.querySelector('.pecasInt')
 let imgInt = document.querySelector('.ImgpecasInt')
 pecasIntBox.onclick = function () {
@@ -140,6 +155,18 @@ pecasIntBox.onclick = function () {
     pecasIntBox.onclick = function () {
         tirarTodasMenosComClass('intm')
     }
+    let itm = document.querySelectorAll('.intm')
+    itm.forEach(pecas => {
+        if (pecas.classList.contains('masc')){
+            pecas.onclick = function(){
+                acessarProdutos('roupas', 'peças-intimas', 'peças-intimas-masc', 'Peças Intimas Masculinas')
+            }
+        }if (pecas.classList.contains('fem')){
+            pecas.onclick = function(){
+                acessarProdutos('roupas', 'peças-intimas', 'peças-intimas-fem', 'Peças Intimas Femininas')
+            }
+        }
+    })
 }
 
 let moleton = document.querySelector('.moleton')
@@ -150,6 +177,18 @@ moleton.onclick = function () {
     moleton.onclick = function () {
         tirarTodasMenosComClass('mlt')
     }
+    let molet = document.querySelectorAll('.mlt')
+    molet.forEach(pecas => {
+        if (pecas.classList.contains('masc')){
+            pecas.onclick = function(){
+                acessarProdutos('roupas', 'Moletom', 'moletom-masc', 'Moletom Masculino e Infantil')
+            }
+        }if (pecas.classList.contains('fem')){
+            pecas.onclick = function(){
+                acessarProdutos('roupas', 'Moletom', 'moletom-fem', 'Moletom Feminino e Infantil')
+            }
+        }
+    })
 }
 
 let blusas = document.querySelector('.blusas')
@@ -160,6 +199,18 @@ blusas.onclick = function () {
     blusas.onclick = function () {
         tirarTodasMenosComClass('bls')
     }
+    let blus = document.querySelectorAll('.bls')
+    blus.forEach(pecas => {
+        if (pecas.classList.contains('masc')){
+            pecas.onclick = function(){
+                acessarProdutos('roupas', 'Blusas', 'blusas-masc', 'Blusas Masculinas')
+            }
+        }if (pecas.classList.contains('fem')){
+            pecas.onclick = function(){
+                acessarProdutos('roupas', 'Blusas', 'blusas-fem', 'Blusas Femininas')
+            }
+        }
+    })
 }
 
 let shorts = document.querySelector('.shorts')
@@ -174,6 +225,9 @@ shorts.onclick = function () {
     shorts.onclick = function () {
         tirarTodasMenosComClass('shrt')
     }
+    boxSelecao.onclick = function () {
+        acessarProdutos('roupas', 'Shorts', 'shorts-masc', 'Shorts Masculino')
+    }
 }
 
 let conjunto = document.querySelector('.conjunto')
@@ -184,6 +238,18 @@ conjunto.onclick = function () {
     conjunto.onclick = function () {
         tirarTodasMenosComClass('cnjt')
     }
+    let conjunt = document.querySelectorAll('.cnjt')
+    conjunt.forEach(pecas => {
+        if (pecas.classList.contains('masc')){
+            pecas.onclick = function(){
+                acessarProdutos('roupas', 'Conjunto', 'conjunto-masc', 'Conjunto Masculino')
+            }
+        }if (pecas.classList.contains('fem')){
+            pecas.onclick = function(){
+                acessarProdutos('roupas', 'Conjunto', 'conjunto-fem', 'Conjunto Feminino')
+            }
+        }
+    })
 }
 
 
