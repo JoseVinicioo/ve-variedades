@@ -75,8 +75,8 @@ function acessarProdutos(namePasta, namePastaProduto, nameArquiv, nameProduto) {
     let NameArquivo = `${nameArquiv}`;
 
     window.location.href = `produto.html?title=${encodeURIComponent(dynamicTitle)}&pasta=${encodeURIComponent(PastaDinamica)}&arquivo=${encodeURIComponent(NameArquivo)}&pastaProduto=${encodeURIComponent(PastaProduto)}`;
-    
-    
+
+
 }
 
 function CriarMascul(nameBox, identf, opc = '') {
@@ -157,12 +157,12 @@ pecasIntBox.onclick = function () {
     }
     let itm = document.querySelectorAll('.intm')
     itm.forEach(pecas => {
-        if (pecas.classList.contains('masc')){
-            pecas.onclick = function(){
+        if (pecas.classList.contains('masc')) {
+            pecas.onclick = function () {
                 acessarProdutos('roupas', 'peças-intimas', 'peças-intimas-masc', 'Peças Intimas Masculinas')
             }
-        }if (pecas.classList.contains('fem')){
-            pecas.onclick = function(){
+        } if (pecas.classList.contains('fem')) {
+            pecas.onclick = function () {
                 acessarProdutos('roupas', 'peças-intimas', 'peças-intimas-fem', 'Peças Intimas Femininas')
             }
         }
@@ -179,12 +179,12 @@ moleton.onclick = function () {
     }
     let molet = document.querySelectorAll('.mlt')
     molet.forEach(pecas => {
-        if (pecas.classList.contains('masc')){
-            pecas.onclick = function(){
+        if (pecas.classList.contains('masc')) {
+            pecas.onclick = function () {
                 acessarProdutos('roupas', 'Moletom', 'moletom-masc', 'Moletom Masculino e Infantil')
             }
-        }if (pecas.classList.contains('fem')){
-            pecas.onclick = function(){
+        } if (pecas.classList.contains('fem')) {
+            pecas.onclick = function () {
                 acessarProdutos('roupas', 'Moletom', 'moletom-fem', 'Moletom Feminino e Infantil')
             }
         }
@@ -201,12 +201,12 @@ blusas.onclick = function () {
     }
     let blus = document.querySelectorAll('.bls')
     blus.forEach(pecas => {
-        if (pecas.classList.contains('masc')){
-            pecas.onclick = function(){
+        if (pecas.classList.contains('masc')) {
+            pecas.onclick = function () {
                 acessarProdutos('roupas', 'Blusas', 'blusas-masc', 'Blusas Masculinas')
             }
-        }if (pecas.classList.contains('fem')){
-            pecas.onclick = function(){
+        } if (pecas.classList.contains('fem')) {
+            pecas.onclick = function () {
                 acessarProdutos('roupas', 'Blusas', 'blusas-fem', 'Blusas Femininas')
             }
         }
@@ -240,12 +240,12 @@ conjunto.onclick = function () {
     }
     let conjunt = document.querySelectorAll('.cnjt')
     conjunt.forEach(pecas => {
-        if (pecas.classList.contains('masc')){
-            pecas.onclick = function(){
+        if (pecas.classList.contains('masc')) {
+            pecas.onclick = function () {
                 acessarProdutos('roupas', 'Conjunto', 'conjunto-masc', 'Conjunto Masculino')
             }
-        }if (pecas.classList.contains('fem')){
-            pecas.onclick = function(){
+        } if (pecas.classList.contains('fem')) {
+            pecas.onclick = function () {
                 acessarProdutos('roupas', 'Conjunto', 'conjunto-fem', 'Conjunto Feminino')
             }
         }
@@ -261,9 +261,35 @@ function cliqueCama() {
     todasMenos(itensCama, imgMesaBanho)
 }
 
+let toalhas = document.querySelector('.Imgtoalhas')
+toalhas.onclick = function () {
+    acessarProdutos('cama-mesa-banho', 'toalhas', 'toalhas', 'Toalhas')
+}
+
+let lençois = document.querySelector('.Imglencois')
+lençois.onclick = function () {
+    acessarProdutos('cama-mesa-banho', 'lençois', 'lençois', 'Lençois')
+}
+
+let colchaDeCama = document.querySelector('.ImgColchaDeCama')
+colchaDeCama.onclick = function () {
+    acessarProdutos('cama-mesa-banho', 'colcha-de-cama', 'colcha-de-cama', 'Colcha de Cama')
+}
+
+let panoDePrato = document.querySelector('.ImgPanoDePrato')
+panoDePrato.onclick = function () {
+    acessarProdutos('cama-mesa-banho', 'pano-de-prato', 'pano-de-prato', 'Pano de Prato')
+}
+
+
 let imgBijuteria = document.querySelector('.bijuteria')
 focusTodosMenos(imgBijuteria)
 let itensBiju = document.querySelector('.Biju')
 function cliqueBiju() {
     todasMenos(itensBiju, imgBijuteria)
+}
+
+let açosFolheados = document.querySelector('.Imgacosefolheados')
+açosFolheados.onclick = function () {
+    acessarProdutos('bijuterias', 'acos-e-folheados', 'acos-e-folheados', 'Aços e Folheados')
 }
