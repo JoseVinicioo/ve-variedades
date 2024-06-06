@@ -5,19 +5,52 @@
 :root {
     --primary: #F5989D;
     --secundary: #5F9995;
-    --silver: #F5F7FA;
+    --silver: #f5f7fa;
     --white: #FFFFFF;
     --grey: #717171;
     --dark-grey: #4D4D4D;
     --dark-color: #263238;
+    --switch-bg-url: url(../src/imgs-geral/MoonStars.svg);
 }
 
+.light{
+    --bg: var(--white);
+    --bgSec: var(--silver);
+    --fontColor: var(--dark-grey);
+    --fontSecColor: var(--grey);
+    --ColorPrimary: var(--primary);
+    --ColorSec: var(--secundary);
+    --btnFontColor: var(--white);
+    --switch-bg-url: url(../src/imgs-geral/Sun.svg);
+    --menu-icon-url: url(../src/imgs-geral/menu-dark.svg);
+}
+.dark{
+    --bg: var(--dark-grey);
+    --bgSec: var(--grey);
+    --fontColor: var(--silver);
+    --fontSecColor: var(--white);
+    --ColorPrimary: var(--secundary);
+    --ColorSec: var(--primary);
+    --btnFontColor: var(--white);--menu-icon-url: url(../src/imgs-geral/menu-light.svg);
+}
+#btnMode{
+    position: fixed;
+    z-index: 99999;
+    bottom: 0;
+    margin-bottom: 20px;
+    right: 0;
+    margin-right: 20px;
+    width: 50px;
+    height: 50px;background: var(--ColorPrimary) var(--switch-bg-url) no-repeat center;   
+
+}
 html {
     scroll-behavior: smooth;
 }
 
 body {
     margin: auto;
+    background-color: var(--bg);
 }
 
 main {
@@ -30,29 +63,29 @@ main {
 h1 {
     font: normal 3.5rem "Inter";
     margin: 0;
-    color: var(--dark-grey);
+    color: var(--fontColor);
 }
 
 h2 {
     font: bold 1.8rem "Inter";
-    color: var(--dark-grey);
+    color: var(--fontColor);
 }
 
 h3 {
     font: 600 1.2rem "Inter";
-    color: var(--dark-grey);
+    color: var(--fontColor);
     margin-top: 10px;
 }
 
 p,
 a {
     font: normal 0.85rem "Inter";
-    color: var(--grey);
+    color: var(--fontSecColor);
     text-decoration: none;
 }
 
 b {
-    color: var(--primary);
+    color: var(--ColorPrimary);
 }
 
 header {
@@ -63,21 +96,24 @@ header {
     display: flex;
     justify-content: flex-start;
     padding: 1%;
-    background-color: var(--white);
+    background-color: var(--bg);
     box-shadow: 1px 2.78px 5.57px rgba(0, 0, 0, 0.137);
 }
 
-#area-logo {
+#area-logo a {
     display: flex;
     align-items: center;
 }
 
-#area-logo>img {
+#area-logo a:hover{
+    background-color: rgba(255, 255, 255, 0);
+}
+#area-logo> a img {
     width: 50px;
     height: 50px;
 }
 
-#area-logo>p {
+#area-logo> a p {
     font-weight: 700;
 }
 
@@ -119,7 +155,7 @@ header {
 }
 
 .popup {
-    background-color: white;
+    background-color: var(--bg);
     padding: 30px 5%;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -135,7 +171,7 @@ header {
 }
 
 .popup h3 {
-    color: var(--dark-grey);
+    color: var(--fontColor);
     font-weight: 600;
     font-size: 0.9rem;
     margin-top: 20px;
@@ -150,15 +186,15 @@ header {
 .popup button {
     margin-top: 20px;
     padding: 10px 20px;
-    background-color: var(--primary);
-    color: var(--white);
+    background-color: var(--ColorPrimary);
+    color: var(--btnFontColor);
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
 
 a:hover {
-    background-color: var(--silver);
+    background-color: var(--bgSec);
     cursor: pointer;
     font-weight: 600;
 }
@@ -185,11 +221,11 @@ button {
     margin-left: 10px;
 }
 #bottonVoltar button{
-    background-color: var(--primary);
+    background-color: var(--ColorPrimary);
 }
 button p {
     font: 500 0.85rem "Inter";
-    color: var(--white);
+    color: var(--btnFontColor);
     margin: 0;
 }
 
@@ -205,7 +241,7 @@ button:hover {
 
 #sec-Boas-Vindas {
     height: 64vh;
-    background-color: var(--silver);
+    background-color: var(--bgSec);
     padding: 170px 0px;
     display: flex;
     align-items: center;
@@ -219,7 +255,7 @@ button:hover {
 }
 
 #letf-side>a>button {
-    background-color: var(--primary);
+    background-color: var(--ColorPrimary);
     margin-top: 25px;
 }
 
@@ -232,7 +268,7 @@ button:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: auto;
+    height: auto;    background-color: var(--bg);
 }
 
 #sec-produtos>h2 {
@@ -281,7 +317,7 @@ button:hover {
 }
 
 .roupas {
-    background: var(--primary) url(../src/arquivo-produtos/roupas/foto-capa.jpg) no-repeat center / cover;
+    background: var(--ColorPrimary) url(../src/arquivo-produtos/roupas/foto-capa.jpg) no-repeat center / cover;
 }
 
 .rp {
@@ -301,14 +337,14 @@ button:hover {
     align-items: center;
     justify-content: center;
     padding: 5px;
-    background-color: var(--white);
+    background-color: var(--bg);
     border: 1px solid var(--dark-color);
     border-radius: 5px;
     width: 90%;
     height: 30px;
     text-align: center;
     font: 600 0.8rem "Inter";
-    color: var(--dark-grey);
+    color: var(--fontColor);
 }
 
 .fem {
@@ -356,27 +392,27 @@ button:hover {
 }
 
 .Imgpijama {
-    background: var(--primary) url(../src/arquivo-produtos/roupas/Pijamas/image.png) no-repeat center/cover;
+    background: var(--ColorPrimary) url(../src/arquivo-produtos/roupas/Pijamas/image.png) no-repeat center/cover;
 }
 
 .ImgpecasInt {
-    background: var(--primary) url(../src/arquivo-produtos/roupas/peças-intimas/image.png) no-repeat center/cover;
+    background: var(--ColorPrimary) url(../src/arquivo-produtos/roupas/peças-intimas/image.png) no-repeat center/cover;
 }
 
 .Imgmoleton {
-    background: var(--primary) url(../src/arquivo-produtos/roupas/Moletom/moleton-image.jpg) no-repeat center/cover;
+    background: var(--ColorPrimary) url(../src/arquivo-produtos/roupas/Moletom/moleton-image.jpg) no-repeat center/cover;
 }
 
 .Imgblusas {
-    background: var(--primary) url(../src/arquivo-produtos/roupas/Blusas/image.png) no-repeat center/cover;
+    background: var(--ColorPrimary) url(../src/arquivo-produtos/roupas/Blusas/image.png) no-repeat center/cover;
 }
 
 .Imgshorts {
-    background: var(--primary) url(../src/arquivo-produtos/roupas/Shorts/image.png) no-repeat top/cover;
+    background: var(--ColorPrimary) url(../src/arquivo-produtos/roupas/Shorts/image.png) no-repeat top/cover;
 }
 
 .Imgconjunto {
-    background: var(--primary) url(../src/arquivo-produtos/roupas/Conjunto/conjunto-image.png) no-repeat center/cover;
+    background: var(--ColorPrimary) url(../src/arquivo-produtos/roupas/Conjunto/conjunto-image.png) no-repeat center/cover;
 }
 
 .as {
@@ -410,32 +446,32 @@ button:hover {
 }
 
 .cama {
-    background: var(--primary) url(../src/arquivo-produtos/cama-mesa-banho/foto-capa.jpg) no-repeat center/cover;
+    background: var(--ColorPrimary) url(../src/arquivo-produtos/cama-mesa-banho/foto-capa.jpg) no-repeat center/cover;
 }
 
 .Imgtoalhas {
-    background: var(--primary) url(../src/arquivo-produtos/cama-mesa-banho/toalhas/image.png) no-repeat center/cover;
+    background: var(--ColorPrimary) url(../src/arquivo-produtos/cama-mesa-banho/toalhas/image.png) no-repeat center/cover;
 }
 
 .Imglencois {
-    background: var(--primary) url(../src/arquivo-produtos/cama-mesa-banho/lençois/image.png) no-repeat center/cover;
+    background: var(--ColorPrimary) url(../src/arquivo-produtos/cama-mesa-banho/lençois/image.png) no-repeat center/cover;
 }
 
 .ImgColchaDeCama {
-    background: var(--primary) url(../src/arquivo-produtos/cama-mesa-banho/colcha-de-cama/image.png) no-repeat center/cover;
+    background: var(--ColorPrimary) url(../src/arquivo-produtos/cama-mesa-banho/colcha-de-cama/image.png) no-repeat center/cover;
 }
 
 .ImgPanoDePrato {
-    background: var(--primary) url(../src/arquivo-produtos/cama-mesa-banho/pano-de-prato/image.png) no-repeat center/cover;
+    background: var(--ColorPrimary) url(../src/arquivo-produtos/cama-mesa-banho/pano-de-prato/image.png) no-repeat center/cover;
 }
 
 
 .bijuteria {
-    background: var(--primary) url(../src/arquivo-produtos/bijuterias/foto-capa.jpg) no-repeat center/cover;
+    background: var(--ColorPrimary) url(../src/arquivo-produtos/bijuterias/foto-capa.jpg) no-repeat center/cover;
 }
 
 .Imgacosefolheados {
-    background: var(--primary) url(../src/arquivo-produtos/bijuterias/acos-e-folheados/image.png) no-repeat center/cover;
+    background: var(--ColorPrimary) url(../src/arquivo-produtos/bijuterias/acos-e-folheados/image.png) no-repeat center/cover;
 }
 
 .focus {
@@ -451,7 +487,8 @@ button:hover {
     text-align: center;
     justify-content: center;
     height: 75vh;
-    padding-top: 55px;
+    padding-top: 55px;    background-color: var(--bg);
+
 }
 
 #sec-sobre-mim>img {
@@ -497,7 +534,7 @@ footer {
 }
 
 #agradecimento {
-    background-color: var(--silver);
+    background-color: var(--bgSec);
     width: 100%;
     padding: 8% 0;
     display: flex;
@@ -575,23 +612,24 @@ footer {
         display: flex;
         text-decoration: underline;
         font-size: 1rem;
-        color: var(--silver);
+        color: var(--btnFontColor);
     }
 
     .nav a:hover {
-        color: var(--dark-color);
+        color: var(--fontSecColor);
     }
 
     .mostrar {
         opacity: 1;
     }
-
-    #menu img {
+    #menu{
+        width: 40px;
+        height: 40px;
+        background: var(--menu-icon-url) center center/cover;
         display: flex;
         margin-right: 20px;
     }
-
-    #menu img:hover {
+    #menu:hover {
         cursor: pointer;
     }
 
@@ -619,14 +657,18 @@ footer {
     .box button {
         width: 80vw;
     }
-}
-
-@media (max-width: 540px) {
+    
     #bottonVoltar {
         bottom: 0;
         left: 50%;
         transform: translateX(-50%);
         margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 540px) {
+    .rp:hover::before {
+        opacity: 0;
     }
 
     #right-side>nav>ul>li>a {
@@ -635,7 +677,7 @@ footer {
 
     .nav a:hover {
         background-color: rgba(0, 0, 0, 0);
-        color: var(--silver);
+        color: var(--fontColor);
     }
 
     h1 {

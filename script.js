@@ -1,3 +1,18 @@
+function toggleMode() {
+    var body = document.querySelector('body')
+    var img = document.querySelector('#btnMode')
+
+    if (body.classList.contains('light')) {
+        body.classList.remove('light');
+        body.classList.add('dark');
+        img.setAttribute("src", "src/imgs-geral/Sun.svg")
+    } else {
+        body.classList.remove('dark');
+        body.classList.add('light');
+        img.setAttribute("src", "src/imgs-geral/Sun.svg")
+    }
+}
+
 function openPopup() {
     document.getElementById('popupOverlay').style.display = 'flex';
 }
