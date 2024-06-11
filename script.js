@@ -40,7 +40,6 @@ ocultarMenu();
 
 let tdsProdutos = document.querySelectorAll('.produto')
 
-
 function focusTodosMenos(semFoco) {
     semFoco.onmouseover = function () {
         img.forEach(produto => {
@@ -55,6 +54,7 @@ function focusTodosMenos(semFoco) {
         })
     }
 }
+
 
 let todas = document.querySelectorAll('.as')
 let img = document.querySelectorAll('.img')

@@ -28,24 +28,75 @@
                 document.getElementById('pageTitle').textContent = decodeURIComponent(title);
             }
 
-            let Divprodutos = document.querySelector('#produtos')
-
-            fetch(`src/arquivo-produtos/${pastaGeral}/${pastaProduto}/json/${nameProd}.json`).then((Response) => {
-                Response.json().then((produtos) => {
-                    console.log(produtos)
+            function carregar() {
+                let Divprodutos = document.querySelector('.produtos')
+            
+                fetch(`src/arquivo-produtos/${pastaGeral}/${pastaProduto}/json/${nameProd}.json`).then((Response) => {
+                    Response.json().then((nameProd) => {
+                        nameProd[title].map((prod) => {
+                            const unicProd = document.createElement('li')
+                            unicProd.classList.add('unic')
+            
+                            const img = document.createElement('div')
+                            img.classList.add('img')
+                            img.classList.add('prodCompr')
+                            img.style.backgroundImage = `url(${prod.imagem})`
+                            img.style.backgroundSize = 'cover';
+                            img.style.backgroundPosition = 'center';
+                            img.style.backgroundRepeat = 'no-repeat';
+            
+                            const tamanho = document.createElement('h3')
+                            tamanho.textContent = 'Tamanho: ' + prod.tamanho
+            
+                            unicProd.appendChild(img)
+                            unicProd.appendChild(tamanho)
+                            Divprodutos.appendChild(unicProd)
+                        })
+                        expadirImg();
+                    })
                 })
-            })
-        });
+            }
+            carregar();
+            
+            function expadirImg() {
+                const elements = document.querySelectorAll('.unic');
+                const fundo = document.querySelector('.overlay2')
+                const fontSelect = document.querySelectorAll('h3')
 
+                elements.forEach(element => {
+                    element.addEventListener('click', (event) => {
+                        event.stopPropagation();
+                        element.classList.toggle('prodExpandido');
+                        fundo.classList.toggle('oculta')
+                        fontSelect.forEach(cadFont => {
+                            cadFont.classList.toggle('fontWhite')
+                        })
+                    });
+                });
+            }
+
+
+
+
+        });
     </script>
 </head>
 
 <body class="light ">
-    <button id="btnMode" onclick="toggleMode()">
-    </button>
-    <main id="produtos">
-        <a id="bottonVoltar" href="index.html#sec-produtos"><button type="button"><p>Voltar ao Catálogo</p></button></a>
-        <h2 id="pageTitle"></h2>
+    <main>
+        <button id="btnMode" onclick="toggleMode()">
+        </button>
+        <div class="cabecalho">
+            <a id="bottonVoltar" href="index.html#sec-produtos"><button type="button">
+                    <p>Voltar ao Catálogo</p>
+                </button></a>
+            <h2 id="pageTitle"></h2>
+        </div>
+        <div class="overlay2 oculta">
+        </div>
+        <ul class="produtos pagCompra ">
+
+        </ul>
 
     </main>
     <script src="script.js"></script>

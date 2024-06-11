@@ -13,7 +13,7 @@
     --switch-bg-url: url(../src/imgs-geral/MoonStars.svg);
 }
 
-.light{
+.light {
     --bg: var(--white);
     --bgSec: var(--silver);
     --fontColor: var(--dark-grey);
@@ -24,36 +24,30 @@
     --switch-bg-url: url(../src/imgs-geral/Sun.svg);
     --menu-icon-url: url(../src/imgs-geral/menu-dark.svg);
 }
-.dark{
+
+.dark {
     --bg: var(--dark-grey);
     --bgSec: var(--grey);
     --fontColor: var(--silver);
     --fontSecColor: var(--white);
-    --ColorPrimary: var(--secundary);
-    --ColorSec: var(--primary);
-    --btnFontColor: var(--white);--menu-icon-url: url(../src/imgs-geral/menu-light.svg);
+    --ColorPrimary: var(--primary);
+    --ColorSec: var(--secundary);
+    --btnFontColor: var(--white);
+    --menu-icon-url: url(../src/imgs-geral/menu-light.svg);
 }
-#btnMode{
-    position: fixed;
-    z-index: 99999;
-    bottom: 0;
-    margin-bottom: 20px;
-    right: 0;
-    margin-right: 20px;
-    width: 50px;
-    height: 50px;background: var(--ColorPrimary) var(--switch-bg-url) no-repeat center;   
 
-}
 html {
     scroll-behavior: smooth;
 }
 
 body {
     margin: auto;
+    min-height: 100vh;
     background-color: var(--bg);
 }
 
-main {
+main{
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -105,15 +99,16 @@ header {
     align-items: center;
 }
 
-#area-logo a:hover{
+#area-logo a:hover {
     background-color: rgba(255, 255, 255, 0);
 }
-#area-logo> a img {
+
+#area-logo>a img {
     width: 50px;
     height: 50px;
 }
 
-#area-logo> a p {
+#area-logo>a p {
     font-weight: 700;
 }
 
@@ -215,14 +210,10 @@ button {
     transition: all 0.5s ease;
 }
 
-#bottonVoltar {
-    position: fixed;
-    left: 0;
-    margin-left: 10px;
-}
-#bottonVoltar button{
+#bottonVoltar button {
     background-color: var(--ColorPrimary);
 }
+
 button p {
     font: 500 0.85rem "Inter";
     color: var(--btnFontColor);
@@ -268,7 +259,8 @@ button:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: auto;    background-color: var(--bg);
+    height: auto;
+    background-color: var(--bg);
 }
 
 #sec-produtos>h2 {
@@ -487,7 +479,8 @@ button:hover {
     text-align: center;
     justify-content: center;
     height: 75vh;
-    padding-top: 55px;    background-color: var(--bg);
+    padding-top: 55px;
+    background-color: var(--bg);
 
 }
 
@@ -584,8 +577,71 @@ footer {
     height: 20px;
 }
 
+#btnMode {
+    position: fixed;
+    z-index: 99999;
+    bottom: 0;
+    margin-bottom: 20px;
+    right: 0;
+    margin-right: 20px;
+    width: 50px;
+    height: 50px;
+    background: var(--ColorPrimary) var(--switch-bg-url) no-repeat center;
+
+}
+
+#bottonVoltar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    margin-top: 30px;
+    margin-left: 10px;
+}
+
+.pagCompra {
+    max-width: 100vw;
+    margin: auto;
+    gap: 60px;
+}
+.prodCompr{
+    width: 100%;
+    height: 100%;
+}
+.unic{
+    width: 300px;
+    height: 270px;
+}
+.prodExpandido {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10000;
+    width: 830px;
+    height: 810px;
+    text-align: center;    
+}
+.overlay2{
+    background-color: #000000be;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    margin: 0;
+    position: fixed;
+    z-index: 1;
+}
+.fontWhite{
+    margin-top: 20px;
+    color: var(--silver);
+    font-size: 1.5rem;
+}
 
 @media (max-width: 840px) {
+    .prodExpandido {
+        width: 70%;
+        height: 70%;
+    }
+
     #sec-produtos {
         height: auto;
     }
@@ -622,13 +678,15 @@ footer {
     .mostrar {
         opacity: 1;
     }
-    #menu{
+
+    #menu {
         width: 40px;
         height: 40px;
         background: var(--menu-icon-url) center center/cover;
         display: flex;
         margin-right: 20px;
     }
+
     #menu:hover {
         cursor: pointer;
     }
@@ -657,9 +715,10 @@ footer {
     .box button {
         width: 80vw;
     }
-    
+
     #bottonVoltar {
         bottom: 0;
+        top: auto;
         left: 50%;
         transform: translateX(-50%);
         margin-bottom: 20px;
@@ -667,6 +726,11 @@ footer {
 }
 
 @media (max-width: 540px) {
+    .prodExpandido {
+        width: 80%;
+        height: 80%;
+    }
+
     .rp:hover::before {
         opacity: 0;
     }

@@ -1,7 +1,7 @@
 {
-    "pijamas": [
+    "Peças Intimas Masculinas": [
         {
-            "img": "../image.png",
+            "imagem": "src/arquivo-produtos/roupas/Pijamas/imagensProds/slaPijama.jpg",
             "tamanho": "P"
         }
     ]
