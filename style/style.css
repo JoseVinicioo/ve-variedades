@@ -247,7 +247,6 @@ button:hover {
 
 #letf-side>a>button {
     background-color: var(--ColorPrimary);
-    margin-top: 25px;
 }
 
 #sec-Boas-Vindas>img {
@@ -305,7 +304,7 @@ button:hover {
     content: '';
     width: 95%;
     height: 95%;
-    background: url(../src/imgs-geral/dedoPraCima.svg) no-repeat right bottom;
+    background: url(../src/imgs-geral/dedoIcon.svg) no-repeat right bottom;
 }
 
 .roupas {
@@ -432,8 +431,9 @@ button:hover {
     display: block;
     content: '';
     width: 100%;
-    height: 85%;
-    background: url(../src/imgs-geral/dedoPraBaixo.svg) no-repeat right bottom;
+    height: 100%;
+    background: url(../src/imgs-geral/dedoIcon.svg) no-repeat left ;
+    transform: rotate(180deg);
     backdrop-filter: blur(1.05px);
 }
 
@@ -596,6 +596,7 @@ footer {
     top: 0;
     margin-top: 30px;
     margin-left: 10px;
+    z-index: 9999;
 }
 
 .pagCompra {
@@ -610,6 +611,7 @@ footer {
 .unic{
     width: 300px;
     height: 270px;
+    text-align: center;
 }
 .prodExpandido {
     position: fixed;

@@ -30,13 +30,13 @@
 
             function carregar() {
                 let Divprodutos = document.querySelector('.produtos')
-            
+
                 fetch(`src/arquivo-produtos/${pastaGeral}/${pastaProduto}/json/${nameProd}.json`).then((Response) => {
                     Response.json().then((nameProd) => {
                         nameProd[title].map((prod) => {
                             const unicProd = document.createElement('li')
                             unicProd.classList.add('unic')
-            
+
                             const img = document.createElement('div')
                             img.classList.add('img')
                             img.classList.add('prodCompr')
@@ -44,10 +44,10 @@
                             img.style.backgroundSize = 'cover';
                             img.style.backgroundPosition = 'center';
                             img.style.backgroundRepeat = 'no-repeat';
-            
+
                             const tamanho = document.createElement('h3')
                             tamanho.textContent = 'Tamanho: ' + prod.tamanho
-            
+
                             unicProd.appendChild(img)
                             unicProd.appendChild(tamanho)
                             Divprodutos.appendChild(unicProd)
@@ -57,7 +57,7 @@
                 })
             }
             carregar();
-            
+
             function expadirImg() {
                 const elements = document.querySelectorAll('.unic');
                 const fundo = document.querySelector('.overlay2')
@@ -70,6 +70,13 @@
                         fundo.classList.toggle('oculta')
                         fontSelect.forEach(cadFont => {
                             cadFont.classList.toggle('fontWhite')
+                        })
+                        fundo.addEventListener('click', () => {
+                            element.classList.remove('prodExpandido')
+                            fundo.classList.add('oculta')
+                            fontSelect.forEach(cadFont => {
+                                cadFont.classList.remove('fontWhite')
+                            })
                         })
                     });
                 });
