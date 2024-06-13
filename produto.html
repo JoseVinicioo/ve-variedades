@@ -62,9 +62,13 @@
                 const elements = document.querySelectorAll('.unic');
                 const fundo = document.querySelector('.overlay2')
                 const fontSelect = document.querySelectorAll('h3')
+                const voltarCat = document.querySelector('.bottonVoltar')
+                const comprarProd = document.querySelector('.bottonComprar')
 
                 elements.forEach(element => {
                     element.addEventListener('click', (event) => {
+                        voltarCat.classList.toggle('oculta')
+                        comprarProd.classList.toggle('oculta')
                         event.stopPropagation();
                         element.classList.toggle('prodExpandido');
                         fundo.classList.toggle('oculta')
@@ -72,6 +76,8 @@
                             cadFont.classList.toggle('fontWhite')
                         })
                         fundo.addEventListener('click', () => {
+                            voltarCat.classList.toggle('oculta')
+                            comprarProd.classList.toggle('oculta')
                             element.classList.remove('prodExpandido')
                             fundo.classList.add('oculta')
                             fontSelect.forEach(cadFont => {
@@ -94,17 +100,26 @@
         <button id="btnMode" onclick="toggleMode()">
         </button>
         <div class="cabecalho">
-            <a id="bottonVoltar" href="index.html#sec-produtos"><button type="button">
+            <a class="bottonVoltar" href="index.html#sec-produtos">
+                <button type="button">
                     <p>Voltar ao Catálogo</p>
-                </button></a>
+                </button>
+            </a>
             <h2 id="pageTitle"></h2>
         </div>
+
         <div class="overlay2 oculta">
         </div>
         <ul class="produtos pagCompra ">
 
         </ul>
 
+        <a class="bottonComprar oculta" href="">
+            <button type="button">
+                <p>Comprar este item</p>
+                <img src="src/icons-redes/whatsIcon.png" alt="icons-whats">
+            </button>
+        </a>
     </main>
     <script src="script.js"></script>
 </body>

@@ -46,7 +46,7 @@ body {
     background-color: var(--bg);
 }
 
-main{
+main {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -210,7 +210,7 @@ button {
     transition: all 0.5s ease;
 }
 
-#bottonVoltar button {
+.bottonVoltar button {
     background-color: var(--ColorPrimary);
 }
 
@@ -432,7 +432,7 @@ button:hover {
     content: '';
     width: 100%;
     height: 100%;
-    background: url(../src/imgs-geral/dedoIcon.svg) no-repeat left ;
+    background: url(../src/imgs-geral/dedoIcon.svg) no-repeat left;
     transform: rotate(180deg);
     backdrop-filter: blur(1.05px);
 }
@@ -590,13 +590,22 @@ footer {
 
 }
 
-#bottonVoltar {
+.bottonVoltar {
     position: fixed;
     left: 0;
     top: 0;
     margin-top: 30px;
-    margin-left: 10px;
+    margin-left: 4%;
     z-index: 9999;
+}
+
+.bottonComprar {
+    position: fixed;
+    right: 0;
+    top: 0;
+    margin-top: 5%;
+    margin-right: 4%;
+    z-index: 99999;
 }
 
 .pagCompra {
@@ -604,15 +613,18 @@ footer {
     margin: auto;
     gap: 60px;
 }
-.prodCompr{
+
+.prodCompr {
     width: 100%;
     height: 100%;
 }
-.unic{
+
+.unic {
     width: 300px;
     height: 270px;
     text-align: center;
 }
+
 .prodExpandido {
     position: fixed;
     top: 50%;
@@ -620,9 +632,10 @@ footer {
     transform: translate(-50%, -50%);
     z-index: 10000;
     width: 830px;
-    height: 810px;  
+    height: 810px;
 }
-.overlay2{
+
+.overlay2 {
     background-color: #000000be;
     width: 100vw;
     height: 100vh;
@@ -631,7 +644,8 @@ footer {
     position: fixed;
     z-index: 1;
 }
-.fontWhite{
+
+.fontWhite {
     margin-top: 20px;
     color: var(--silver);
     font-size: 1.5rem;
@@ -717,12 +731,30 @@ footer {
         width: 80vw;
     }
 
-    #bottonVoltar {
+    .bottonVoltar {
         bottom: 0;
         top: auto;
         left: 50%;
         transform: translateX(-50%);
         margin-bottom: 20px;
+    }
+
+    .bottonComprar {
+        top: 0;
+        bottom: auto;
+        right: 50%;
+        transform: translateX(50%);
+        margin-right: 0;
+    }
+    .bottonComprar button{
+        padding: 10px 20px;
+    }
+    .bottonComprar p{
+        font-size: 0.8rem;
+    }
+    .bottonComprar img{
+        width: 17px;
+        height: 17px;
     }
 }
 
