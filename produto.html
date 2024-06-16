@@ -32,8 +32,8 @@
                 let Divprodutos = document.querySelector('.produtos')
 
                 fetch(`src/arquivo-produtos/${pastaGeral}/${pastaProduto}/json/${nameProd}.json`).then((Response) => {
-                    Response.json().then((nameProd) => {
-                        nameProd[title].map((prod) => {
+                    Response.json().then((nameProdu) => {
+                        nameProdu[title].map((prod) => {
                             const unicProd = document.createElement('li')
                             unicProd.classList.add('unic')
 
@@ -46,11 +46,16 @@
                             img.style.backgroundRepeat = 'no-repeat';
 
                             const tamanho = document.createElement('h3')
+                            tamanho.classList.add('tamanho')
                             tamanho.textContent = 'Tamanho: ' + prod.tamanho
 
                             unicProd.appendChild(img)
                             unicProd.appendChild(tamanho)
                             Divprodutos.appendChild(unicProd)
+
+                            var btnComprar = document.querySelector('.bottonComprar')
+                            btnComprar.href = `https://wa.me/5588994859101?text=Ol%C3%A1%2C%20fiquei%20interessada(o)%20nesse%20produto%3A%0ACategoria do Produto%3A ${nameProd}%0ATamanho%3A ${prod.tamanho}%20%0AModelo%3A%20`
+                            btnComprar.target = "_blank"
                         })
                         expadirImg();
                     })
@@ -87,10 +92,6 @@
                     });
                 });
             }
-
-
-
-
         });
     </script>
 </head>

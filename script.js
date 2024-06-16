@@ -144,7 +144,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 
 let boxPijama = document.querySelector('.pijama')
-boxPijama.onclick = function () {
+let imgPijam = document.querySelector('.Imgpijama')
+imgPijam.onclick = function () {
     tirarTodasMenosComClass('pjama')
     let boxSelecao = document.createElement('div')
     boxSelecao.classList.add('selecao')
@@ -152,7 +153,7 @@ boxPijama.onclick = function () {
     boxSelecao.innerHTML = 'Adulto/Feminino'
     boxSelecao.classList.add('fem')
     boxPijama.appendChild(boxSelecao)
-    boxPijama.onclick = function () {
+    imgPijam.onclick = function () {
         tirarTodasMenosComClass('pjama')
     }
     boxSelecao.onclick = function () {
@@ -163,11 +164,11 @@ boxPijama.onclick = function () {
 
 let pecasIntBox = document.querySelector('.pecasInt')
 let imgInt = document.querySelector('.ImgpecasInt')
-pecasIntBox.onclick = function () {
+imgInt.onclick = function () {
     tirarTodasMenosComClass('intm')
     CriarMascul(pecasIntBox, 'intm')
     CriarFem(pecasIntBox, 'intm')
-    pecasIntBox.onclick = function () {
+    imgInt.onclick = function () {
         tirarTodasMenosComClass('intm')
     }
     let itm = document.querySelectorAll('.intm')
@@ -185,11 +186,12 @@ pecasIntBox.onclick = function () {
 }
 
 let moleton = document.querySelector('.moleton')
-moleton.onclick = function () {
+let imgMolet = document.querySelector('.Imgmoleton')
+imgMolet.onclick = function () {
     tirarTodasMenosComClass('mlt')
     CriarMascul(moleton, 'mlt', 'Infantil/')
     CriarFem(moleton, 'mlt', 'Infantil/')
-    moleton.onclick = function () {
+    imgMolet.onclick = function () {
         tirarTodasMenosComClass('mlt')
     }
     let molet = document.querySelectorAll('.mlt')
@@ -207,11 +209,12 @@ moleton.onclick = function () {
 }
 
 let blusas = document.querySelector('.blusas')
-blusas.onclick = function () {
+let imgBlus = document.querySelector('.Imgblusas')
+imgBlus.onclick = function () {
     tirarTodasMenosComClass('bls')
     CriarMascul(blusas, 'bls', 'Adulto/')
     CriarFem(blusas, 'bls', 'Adulto/')
-    blusas.onclick = function () {
+    imgBlus.onclick = function () {
         tirarTodasMenosComClass('bls')
     }
     let blus = document.querySelectorAll('.bls')
@@ -229,7 +232,8 @@ blusas.onclick = function () {
 }
 
 let shorts = document.querySelector('.shorts')
-shorts.onclick = function () {
+let imgShts = document.querySelector('.Imgshorts')
+imgShts.onclick = function () {
     tirarTodasMenosComClass('shrt')
     let boxSelecao = document.createElement('div')
     boxSelecao.classList.add('selecao')
@@ -237,7 +241,7 @@ shorts.onclick = function () {
     boxSelecao.innerHTML = 'Adulto/Masculino'
     boxSelecao.classList.add('masc')
     shorts.appendChild(boxSelecao)
-    shorts.onclick = function () {
+    imgShts.onclick = function () {
         tirarTodasMenosComClass('shrt')
     }
     boxSelecao.onclick = function () {
@@ -246,11 +250,12 @@ shorts.onclick = function () {
 }
 
 let conjunto = document.querySelector('.conjunto')
-conjunto.onclick = function () {
+let imgConjt = document.querySelector('.Imgconjunto')
+imgConjt.onclick = function () {
     tirarTodasMenosComClass('cnjt')
     CriarMascul(conjunto, 'cnjt', 'Infantil/')
     CriarFem(conjunto, 'cnjt', 'Infantil/')
-    conjunto.onclick = function () {
+    imgConjt.onclick = function () {
         tirarTodasMenosComClass('cnjt')
     }
     let conjunt = document.querySelectorAll('.cnjt')
@@ -277,21 +282,25 @@ function cliqueCama() {
 }
 
 let toalhas = document.querySelector('.Imgtoalhas')
-toalhas.onclick = function () {
+let imgToalh = document.querySelector('.Imgtoalhas')
+imgToalh.onclick = function () {
     acessarProdutos('cama-mesa-banho', 'toalhas', 'toalhas', 'Toalhas')
 }
 
 let lençois = document.querySelector('.Imglencois')
-lençois.onclick = function () {
+let imgLenc = document.querySelector('.Imglencois')
+imgLenc.onclick = function () {
     acessarProdutos('cama-mesa-banho', 'lençois', 'lençois', 'Lençois')
 }
 
 let colchaDeCama = document.querySelector('.ImgColchaDeCama')
-colchaDeCama.onclick = function () {
+let imgColch = document.querySelector('.ImgColchaDeCama')
+imgColch.onclick = function () {
     acessarProdutos('cama-mesa-banho', 'colcha-de-cama', 'colcha-de-cama', 'Colcha de Cama')
 }
 
 let panoDePrato = document.querySelector('.ImgPanoDePrato')
+let imgPanoMesa = document.querySelector('.ImgPanoDePrato')
 panoDePrato.onclick = function () {
     acessarProdutos('cama-mesa-banho', 'pano-de-prato', 'pano-de-prato', 'Pano de Prato')
 }
@@ -305,6 +314,7 @@ function cliqueBiju() {
 }
 
 let açosFolheados = document.querySelector('.Imgacosefolheados')
-açosFolheados.onclick = function () {
+let imgAços = document.querySelector('.Imgacosefolheados')
+imgAços.onclick = function () {
     acessarProdutos('bijuterias', 'acos-e-folheados', 'acos-e-folheados', 'Aços e Folheados')
 }
