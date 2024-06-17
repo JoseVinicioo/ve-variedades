@@ -47,15 +47,12 @@
 
                             const tamanho = document.createElement('h3')
                             tamanho.classList.add('tamanho')
-                            tamanho.textContent = 'Tamanho: ' + prod.tamanho
+                            tamanho.innerHTML = 'Tamanho: ' + prod.tamanho
 
                             unicProd.appendChild(img)
                             unicProd.appendChild(tamanho)
                             Divprodutos.appendChild(unicProd)
 
-                            var btnComprar = document.querySelector('.bottonComprar')
-                            btnComprar.href = `https://wa.me/5588994859101?text=Ol%C3%A1%2C%20fiquei%20interessada(o)%20nesse%20produto%3A%0ACategoria do Produto%3A ${nameProd}%0ATamanho%3A ${prod.tamanho}%20%0AModelo%3A%20`
-                            btnComprar.target = "_blank"
                         })
                         expadirImg();
                     })
@@ -65,33 +62,50 @@
 
             function expadirImg() {
                 const elements = document.querySelectorAll('.unic');
-                const fundo = document.querySelector('.overlay2')
-                const fontSelect = document.querySelectorAll('h3')
-                const voltarCat = document.querySelector('.bottonVoltar')
-                const comprarProd = document.querySelector('.bottonComprar')
+                const fundo = document.querySelector('.overlay2');
+                const voltarCat = document.querySelector('.bottonVoltar');
+                const comprarProd = document.querySelector('.bottonComprar');
 
                 elements.forEach(element => {
                     element.addEventListener('click', (event) => {
-                        voltarCat.classList.toggle('oculta')
-                        comprarProd.classList.toggle('oculta')
+                        voltarCat.classList.toggle('oculta');
+                        comprarProd.classList.toggle('oculta');
                         event.stopPropagation();
                         element.classList.toggle('prodExpandido');
-                        fundo.classList.toggle('oculta')
-                        fontSelect.forEach(cadFont => {
-                            cadFont.classList.toggle('fontWhite')
-                        })
-                        fundo.addEventListener('click', () => {
-                            voltarCat.classList.toggle('oculta')
-                            comprarProd.classList.toggle('oculta')
-                            element.classList.remove('prodExpandido')
-                            fundo.classList.add('oculta')
-                            fontSelect.forEach(cadFont => {
-                                cadFont.classList.remove('fontWhite')
-                            })
-                        })
+                        fundo.classList.toggle('oculta');
+
+                        let fontSelect = element.querySelector('h3');
+                        if (element.classList.contains('prodExpandido')) {
+                            // Se estiver ativo, aplica a classe .fontWhite
+                            fontSelect.classList.add('fontWhite');
+                        } else {
+                            // Se não estiver ativo, remove a classe .fontWhite
+                            fontSelect.classList.remove('fontWhite');
+                        }
+
+                        let tam = document.querySelector('.fontWhite').textContent;
+                        let btnComprar = document.querySelector('.bottonComprar');
+                        btnComprar.href = `https://wa.me/5588994859101?text=Ol%C3%A1%2C%20fiquei%20interessada(o)%20nesse%20produto%3A%0ACategoria do Produto: ${title}%0A${tam}%20%0AModelo%3A%20`;
+                        btnComprar.target = "_blank";
                     });
                 });
+
+
+                // Adiciona um ouvinte de evento para o fundo
+                fundo.addEventListener('click', () => {
+                    voltarCat.classList.toggle('oculta');
+                    comprarProd.classList.toggle('oculta');
+                    elements.forEach(element => {
+                        element.classList.remove('prodExpandido');
+                        const fontSelect = element.querySelectorAll('.prodExpandido h3');
+                        fontSelect.forEach(cadFont => {
+                            cadFont.classList.remove('fontWhite');
+                        });
+                    });
+                    fundo.classList.add('oculta');
+                });
             }
+
         });
     </script>
 </head>
