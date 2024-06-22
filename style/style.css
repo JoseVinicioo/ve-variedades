@@ -598,7 +598,14 @@ footer {
     background: var(--ColorPrimary) var(--switch-bg-url) no-repeat center;
 
 }
-
+.valor{
+    margin: 0;
+    margin-top: 8px;
+    color: var(--primary);
+}
+.tamanho{
+    margin: 0px;
+}
 .bottonVoltar {
     position: fixed;
     left: 0;
@@ -620,7 +627,7 @@ footer {
 .pagCompra {
     max-width: 100vw;
     margin: auto;
-    gap: 60px;
+    gap: 90px;
 }
 
 .prodCompr {
@@ -655,7 +662,6 @@ footer {
 }
 
 .fontWhite {
-    margin-top: 20px;
     color: var(--silver);
     font-size: 1.5rem;
 }

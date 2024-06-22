@@ -45,11 +45,16 @@
                             img.style.backgroundPosition = 'center';
                             img.style.backgroundRepeat = 'no-repeat';
 
+                            const valor = document.createElement('h2')
+                            valor.classList.add('valor')
+                            valor.innerHTML = prod.valor
+                            
                             const tamanho = document.createElement('h3')
                             tamanho.classList.add('tamanho')
                             tamanho.innerHTML = 'Tamanho: ' + prod.tamanho
 
                             unicProd.appendChild(img)
+                            unicProd.appendChild(valor)
                             unicProd.appendChild(tamanho)
                             Divprodutos.appendChild(unicProd)
 
