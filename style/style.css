@@ -372,8 +372,17 @@ button:hover {
 
 .redondo {
     border-radius: 50%;
+    position: relative;
 }
-
+.colorSobre{
+    background-color: var(--primary);
+    display: none;
+    opacity: 0.4;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
 .rp.active::before {
     opacity: 0.5;
 }
@@ -669,6 +678,7 @@ footer {
         left: 0;
         background-color: rgba(0, 0, 0, 0.438);
         opacity: 0;
+        display: none;
         transition: opacity 0.3s ease-in-out;
     }
 
@@ -692,6 +702,7 @@ footer {
 
     .mostrar {
         opacity: 1;
+        display: flex;
     }
 
     #menu {
@@ -762,10 +773,6 @@ footer {
     .prodExpandido {
         width: 80%;
         height: 80%;
-    }
-
-    .rp:hover::before {
-        opacity: 0;
     }
 
     #right-side>nav>ul>li>a {

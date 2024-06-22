@@ -134,10 +134,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 item.classList.remove('active');
                 item.classList.remove('redondo')
             });
-
             // Adiciona a classe 'active' apenas ao contêiner clicado
-            container.classList.toggle('active');
-            container.classList.toggle('redondo');
+            container.classList.add('active');
+            container.classList.add('redondo');
         });
     });
 });
