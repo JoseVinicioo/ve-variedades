@@ -81,24 +81,28 @@
 
                         let fontSelect = element.querySelector('h3');
                         let imgSelect = element.querySelector('div')
+                        let valorSelect = element.querySelector('h2')
                         if (element.classList.contains('prodExpandido')) {
                             // Se estiver ativo, aplica a classe .fontWhite
                             fontSelect.classList.add('fontWhite');
                             imgSelect.classList.add('add');
+                            valorSelect.classList.add('valorSelecionado')
                         } else {
                             // Se não estiver ativo, remove a classe .fontWhite
                             fontSelect.classList.remove('fontWhite');
                             imgSelect.classList.remove('add');
+                            valorSelect.classList.remove('valorSelecionado')
                         }
 
                         let tam = document.querySelector('.fontWhite').textContent;
+                        let preco = document.querySelector('.valorSelecionado').textContent;
                         let url = document.querySelector('.add')
                         let urlComputada = window.getComputedStyle(url)
                         let urlImagem = urlComputada.getPropertyValue('background-image')
                         urlImagem = urlImagem.replace(/(url\(|\)|"|')/g, '')
                         console.log(urlImagem)
                         let btnComprar = document.querySelector('.bottonComprar');
-                        btnComprar.href = `https://wa.me/5588994859101?text=Ol%C3%A1%2C%20fiquei%20interessada(o)%20nesse%20produto%3A%0ACategoria do Produto: ${title}%0A${tam}%20%0AModelo: ${urlImagem}`;
+                        btnComprar.href = `https://wa.me/5588994859101?text=Ol%C3%A1%2C%20fiquei%20interessada(o)%20nesse%20produto! %0ACategoria do Produto: ${title}%0A${tam}%20%0AValor: ${preco}%20%0AModelo: ${urlImagem}`;
                         btnComprar.target = "_blank";
                     });
                 });
