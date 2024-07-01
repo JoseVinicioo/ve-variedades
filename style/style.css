@@ -359,7 +359,7 @@ button:hover {
     position: relative;
 }
 
-.rp:before {
+.rp::before {
     display: block;
     content: '';
     width: 100%;
