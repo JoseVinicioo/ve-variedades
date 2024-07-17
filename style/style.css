@@ -637,7 +637,7 @@ footer {
 
 .unic {
     width: 300px;
-    height: 270px;
+    height: 420px;
     text-align: center;
 }
 
@@ -647,8 +647,8 @@ footer {
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 10000;
-    width: 830px;
-    height: 810px;
+    width: 600px;
+    height: 800px;
 }
 
 .overlay2 {

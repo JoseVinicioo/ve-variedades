@@ -1,8 +1,109 @@
 {
     "Blusas Masculinas": [
         {
-            "imagem": "src/arquivo-produtos/roupas/Pijamas/imagensProds/slaPijama.jpg",
-            "tamanho": "P"
+            "imagem": "https://i.im.ge/2024/07/17/V3qAKL.blusaMasc-P.jpeg",
+            "tamanho": "P",
+            "valor": "59,99 R$"
+        },
+        {
+            "imagem": "https://i.im.ge/2024/07/17/V3q6AW.blusaMasc-P-2.jpeg",
+            "tamanho": "P",
+            "valor": "59,99 R$"
+        },
+        {
+            "imagem": "https://i.im.ge/2024/07/17/V3qNp0.blusaMasc-P-3.jpeg",
+            "tamanho": "P",
+            "valor": "59,99 R$"
+        },
+        {
+            "imagem": "https://i.im.ge/2024/07/17/V3qt2T.blusaMasc-P-4.jpeg",
+            "tamanho": "P",
+            "valor": "59,99 R$"
+        },
+        {
+            "imagem": "https://i.im.ge/2024/07/17/V3qywc.blusaMasc-P-5.jpeg",
+            "tamanho": "P",
+            "valor": "59,99 R$"
+        },
+        {
+            "imagem": "https://i.im.ge/2024/07/17/V3qw7r.blusaMasc-M.jpeg",
+            "tamanho": "M",
+            "valor": "59,99 R$"
+        },
+        {
+            "imagem": "https://i.im.ge/2024/07/17/V3qL1C.blusaMasc-M-2.jpeg",
+            "tamanho": "M",
+            "valor": "59,99 R$"
+        },
+        {
+            "imagem": "https://i.im.ge/2024/07/17/V3qDH4.blusaMasc-M-3.jpeg",
+            "tamanho": "M",
+            "valor": "69,99 R$"
+        },
+        {
+            "imagem": "https://i.im.ge/2024/07/17/V3qaaY.blusaMasc-M-4.jpeg",
+            "tamanho": "M",
+            "valor": "59,99 R$"
+        },
+        {
+            "imagem": "https://i.im.ge/2024/07/17/V3qqGM.blusaMasc-M-5.jpeg",
+            "tamanho": "M",
+            "valor": "59,99 R$"
+        },
+        {
+            "imagem": "https://i.im.ge/2024/07/17/V3qUwq.blusaMasc-M-6.jpeg",
+            "tamanho": "M",
+            "valor": "59,99 R$"
+        },
+        {
+            "imagem": "https://i.im.ge/2024/07/17/V3qhZp.blusaMasc-M-7.jpeg",
+            "tamanho": "M",
+            "valor": "59,99 R$"
+        },
+        {
+            "imagem": "https://i.im.ge/2024/07/17/V3q0XP.blusaMasc-M-8.jpeg",
+            "tamanho": "M",
+            "valor": "59,99 R$"
+        },
+        {
+            "imagem": "https://i.im.ge/2024/07/17/V3q5i1.blusaMasc-M-9.jpeg",
+            "tamanho": "M",
+            "valor": "69,99 R$"
+        },
+        {
+            "imagem": "https://i.im.ge/2024/07/17/V3q9bf.blusaMasc-M-10.jpeg",
+            "tamanho": "M",
+            "valor": "59,99 R$"
+        },
+        {
+            "imagem": "https://i.im.ge/2024/07/17/V3qjGm.blusaMasc-M-11.jpeg",
+            "tamanho": "M",
+            "valor": "69,99 R$"
+        },
+        {
+            "imagem": "https://i.im.ge/2024/07/17/V3q7AD.blusaMasc-G.jpeg",
+            "tamanho": "G",
+            "valor": "59,99 R$"
+        },
+        {
+            "imagem": "https://i.im.ge/2024/07/17/V3qEXG.blusaMasc-G-2.jpeg",
+            "tamanho": "G",
+            "valor": "59,99 R$"
+        },
+        {
+            "imagem": "https://i.im.ge/2024/07/17/V3qxix.blusaMasc-G-3.jpeg",
+            "tamanho": "G",
+            "valor": "59,99 R$"
+        },
+        {
+            "imagem": "https://i.im.ge/2024/07/17/V3q3ca.blusaMasc-G-4.jpeg",
+            "tamanho": "G",
+            "valor": "69,99 R$"
+        },
+        {
+            "imagem": "https://i.im.ge/2024/07/17/V3qYGJ.blusaMasc-G-5.jpeg",
+            "tamanho": "G",
+            "valor": "69,99 R$"
         }
     ]
 }
