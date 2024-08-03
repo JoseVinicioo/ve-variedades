@@ -48,12 +48,16 @@ body {
 
 main {
     min-height: 100vh;
+    width: 80vw;
+    margin: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-
+#pageTitle{
+    margin: 50px 0px;
+}
 h1 {
     font: normal 3.5rem "Inter";
     margin: 0;
@@ -92,6 +96,13 @@ header {
     padding: 1%;
     background-color: var(--bg);
     box-shadow: 1px 2.78px 5.57px rgba(0, 0, 0, 0.137);
+    animation: move 700ms ease;
+}
+
+@keyframes move{
+    from{
+        transform: translateY(-100%);
+    }
 }
 
 #area-logo a {
@@ -297,14 +308,31 @@ button:hover {
     width: 300px;
     height: 270px;
     transition: all 0.6s ease;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img{
+    --background-image: url(../src/imgs-geral/dedoIcon.svg);
 }
 
 .img::before {
     display: block;
     content: '';
-    width: 95%;
-    height: 95%;
-    background: url(../src/imgs-geral/dedoIcon.svg) no-repeat right bottom;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: var(--background-image) no-repeat center;
+    animation: dedoIcon 2s forwards infinite ease-in-out reverse;
+}
+
+@keyframes dedoIcon{
+    50%{
+        scale: 2;
+        transform: rotate(-70deg);
+    }
 }
 
 .roupas {
@@ -444,6 +472,7 @@ button:hover {
     background: url(../src/imgs-geral/dedoIcon.svg) no-repeat left;
     transform: rotate(180deg);
     backdrop-filter: blur(1.05px);
+    animation: none;
 }
 
 .cama {
@@ -593,11 +622,18 @@ footer {
     margin-bottom: 20px;
     right: 0;
     margin-right: 20px;
-    width: 50px;
-    height: 50px;
+    width: 55px;
+    height: 55px;
     background: var(--ColorPrimary) var(--switch-bg-url) no-repeat center;
-
+    animation: buttonRight 600ms ease;
 }
+
+@keyframes buttonRight{
+    from{
+        transform: translateX(100%);
+    }
+}
+
 .valor{
     margin: 0;
     margin-top: 8px;

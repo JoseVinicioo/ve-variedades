@@ -79,6 +79,7 @@
                         element.classList.toggle('prodExpandido');
                         fundo.classList.toggle('oculta');
 
+                        let dedo = element.querySelector('.img')
                         let fontSelect = element.querySelector('h3');
                         let imgSelect = element.querySelector('div')
                         let valorSelect = element.querySelector('h2')
@@ -87,6 +88,7 @@
                             fontSelect.classList.add('fontWhite');
                             imgSelect.classList.add('add');
                             valorSelect.classList.add('valorSelecionado')
+                            dedo.style.setProperty('--background-image', 'none');
                         } else {
                             // Se não estiver ativo, remove a classe .fontWhite
                             fontSelect.classList.remove('fontWhite');
